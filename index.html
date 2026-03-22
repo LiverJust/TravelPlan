@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北海道道東・道北 六人大家庭自駕遊 2026｜7月20–30日</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-blue: #4A9EBF;
+  --coral-orange: #E8855A;
+  --warm-white: #FAF7F2;
+  --forest-green: #5A8F6B;
+  --deep-navy: #2C3E50;
+  --light-sand: #EDE8E0;
+  --shadow: rgba(74, 158, 191, 0.15);
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--warm-white);
+  color: var(--deep-navy);
+  line-height: 1.7;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--sky-blue) 0%, #3a7d9e 40%, var(--coral-orange) 100%);
+  padding: 60px 20px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  animation: bgFloat 20s linear infinite;
+}
+@keyframes bgFloat { from {background-position:0 0} to {background-position:200px 200px} }
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 6px 20px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  margin-bottom: 12px;
+  position: relative;
+}
+.hero-sub {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  margin-bottom: 36px;
+  position: relative;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-box {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: var(--radius);
+  padding: 18px 28px;
+  min-width: 130px;
+  color: #fff;
+}
+.stat-box .num {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  display: block;
+}
+.stat-box .label {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+.emoji-deco {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ===== TABS ===== */
+.tab-nav {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border: 2px solid var(--sky-blue);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--sky-blue);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.tab-btn:hover { background: rgba(74,158,191,0.1); }
+.tab-btn.active {
+  background: var(--sky-blue);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(74,158,191,0.4);
+}
+
+/* ===== MAIN CONTENT ===== */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+.tab-content { display: none; animation: fadeIn 0.3s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(8px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--deep-navy);
+  margin-bottom: 8px;
+}
+.section-title span { color: var(--sky-blue); }
+.section-subtitle {
+  color: #6b7a8e;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--sky-blue), var(--coral-orange));
+  border-radius: 3px;
+}
+.timeline-item { position: relative; margin-bottom: 24px; }
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+.timeline-header:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 24px rgba(74,158,191,0.2);
+}
+.day-dot {
+  position: absolute;
+  left: -33px;
+  width: 22px; height: 22px;
+  background: var(--sky-blue);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(74,158,191,0.25);
+  flex-shrink: 0;
+}
+.day-num {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  background: var(--sky-blue);
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.day-info { flex: 1; }
+.day-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--deep-navy);
+}
+.day-subtitle { font-size: 0.82rem; color: #7a8899; margin-top: 2px; }
+.day-region {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.region-east { background: rgba(74,158,191,0.15); color: var(--sky-blue); }
+.region-north { background: rgba(90,143,107,0.15); color: var(--forest-green); }
+.region-central { background: rgba(232,133,90,0.15); color: var(--coral-orange); }
+.arrow {
+  font-size: 0.9rem;
+  color: var(--sky-blue);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.timeline-body {
+  padding: 20px 20px 20px 20px;
+  background: var(--light-sand);
+  border-radius: 0 0 var(--radius) var(--radius);
+  margin-top: -8px;
+}
+.timeline-body.collapsed { display: none; }
+.activity-list { list-style: none; }
+.activity-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(44,62,80,0.1);
+  font-size: 0.93rem;
+}
+.activity-list li:last-child { border-bottom: none; }
+.activity-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.activity-text strong { color: var(--sky-blue); font-weight: 700; }
+.tip-box {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(90,143,107,0.12);
+  border-left: 3px solid var(--forest-green);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.85rem;
+  color: #3a5f47;
+}
+.stay-info {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: rgba(74,158,191,0.1);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2a6080;
+}
+
+/* ===== ATTRACTION CARDS ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media(max-width: 900px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 560px) { .cards-grid { grid-template-columns: 1fr; } }
+.attraction-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.attraction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(74,158,191,0.22);
+}
+.card-top {
+  height: 8px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.card-top.blue { background: var(--sky-blue); }
+.card-top.orange { background: var(--coral-orange); }
+.card-top.green { background: var(--forest-green); }
+.card-body { padding: 22px; }
+.card-emoji { font-size: 2.8rem; margin-bottom: 10px; display: block; }
+.card-name {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--deep-navy);
+  margin-bottom: 4px;
+}
+.card-location {
+  font-size: 0.82rem;
+  color: #8a9ab2;
+  margin-bottom: 10px;
+}
+.card-location::before { content: '📍 '; }
+.stars { color: var(--coral-orange); font-size: 0.95rem; margin-bottom: 10px; }
+.card-tip {
+  padding: 8px 12px;
+  background: rgba(90,143,107,0.1);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: #3a6049;
+  margin-bottom: 12px;
+}
+.card-tag {
+  display: inline-block;
+  font-size: 0.73rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.tag-east { background: rgba(74,158,191,0.15); color: var(--sky-blue); }
+.tag-north { background: rgba(90,143,107,0.15); color: var(--forest-green); }
+.tag-must { background: rgba(232,133,90,0.15); color: var(--coral-orange); }
+.tag-nature { background: rgba(74,158,191,0.1); color: #2a7a9f; }
+.tag-senior { background: rgba(180,120,200,0.18); color: #7b4fa0; }
+.senior-alert {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(180,120,200,0.1);
+  border-left: 3px solid #9b6dbf;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.83rem;
+  color: #5a3a75;
+}
+.family-banner {
+  background: linear-gradient(135deg, rgba(74,158,191,0.08), rgba(155,109,191,0.08));
+  border: 1.5px solid rgba(155,109,191,0.25);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.family-member {
+  display: flex; flex-direction: column; align-items: center;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  min-width: 90px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.family-member .m-icon { font-size: 1.8rem; margin-bottom: 4px; }
+.family-member .m-label { font-size: 0.78rem; font-weight: 700; color: var(--deep-navy); text-align: center; }
+.family-member .m-note { font-size: 0.7rem; color: #8a9ab2; }
+.toggle-btn {
+  width: 100%;
+  padding: 8px;
+  background: none;
+  border: 1.5px solid var(--light-sand);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--sky-blue);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+.toggle-btn:hover { background: rgba(74,158,191,0.07); }
+.detail-content {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+  font-size: 0.87rem;
+  color: #5a6a7e;
+  line-height: 1.7;
+}
+
+/* ===== FOOD ===== */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.food-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 16px var(--shadow);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: transform 0.2s;
+}
+.food-card:hover { transform: translateY(-3px); }
+.food-emoji { font-size: 2.2rem; flex-shrink: 0; }
+.food-info h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--deep-navy);
+  margin-bottom: 3px;
+}
+.food-location { font-size: 0.8rem; color: #8a9ab2; margin-bottom: 6px; }
+.food-price {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--coral-orange);
+  margin-bottom: 5px;
+}
+.food-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+.label-must { background: rgba(232,133,90,0.2); color: var(--coral-orange); }
+.label-local { background: rgba(90,143,107,0.15); color: var(--forest-green); }
+.label-sweet { background: rgba(74,158,191,0.15); color: var(--sky-blue); }
+
+/* ===== INFO SECTION ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+@media(max-width: 750px) { .info-grid { grid-template-columns: 1fr; } }
+.info-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+.info-card h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--deep-navy);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.info-card ul { list-style: none; }
+.info-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--light-sand);
+  font-size: 0.88rem;
+  color: #5a6a7e;
+}
+.info-card ul li:last-child { border-bottom: none; }
+.info-card ul li strong { color: var(--deep-navy); font-weight: 700; }
+.budget-total {
+  background: linear-gradient(135deg, var(--sky-blue), var(--coral-orange));
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.budget-total .big { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 2.4rem; }
+.budget-total p { opacity: 0.9; font-size: 0.9rem; margin-top: 4px; }
+
+/* ===== DRIVING TIPS ===== */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+@media(max-width: 600px) { .tips-grid { grid-template-columns: 1fr; } }
+.tip-item {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  box-shadow: 0 2px 12px var(--shadow);
+  display: flex;
+  gap: 12px;
+}
+.tip-item .t-icon { font-size: 1.6rem; flex-shrink: 0; }
+.tip-item h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.tip-item p { font-size: 0.83rem; color: #6b7c92; }
+
+/* ===== MAP ===== */
+.map-section {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 4px 20px var(--shadow);
+  margin-top: 32px;
+}
+.route-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.route-stop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--deep-navy);
+}
+.route-stop::after {
+  content: '→';
+  color: var(--coral-orange);
+  margin-left: 4px;
+}
+.route-stop:last-child::after { content: ''; }
+.map-placeholder {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #e8f4f8, #f0f7ea);
+  border-radius: var(--radius-sm);
+  padding: 40px;
+  text-align: center;
+  border: 2px dashed var(--sky-blue);
+}
+.map-link-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 30px;
+  background: var(--sky-blue);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.map-link-btn:hover {
+  background: #3a7d9e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(74,158,191,0.4);
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(74,158,191,0.08), rgba(232,133,90,0.06));
+  border: 1.5px solid rgba(74,158,191,0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+.highlight-box h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--sky-blue);
+  margin-bottom: 10px;
+}
+.highlight-box p { font-size: 0.9rem; color: #5a6a7e; line-height: 1.8; }
+
+/* ===== REGIONS INTRO ===== */
+.regions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+@media(max-width: 600px) { .regions-grid { grid-template-columns: 1fr; } }
+.region-card {
+  border-radius: var(--radius);
+  padding: 24px;
+  color: #fff;
+}
+.region-card.east { background: linear-gradient(135deg, var(--sky-blue), #2a7d9e); }
+.region-card.north { background: linear-gradient(135deg, var(--forest-green), #3a6e4f); }
+.region-card h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.region-card p { font-size: 0.88rem; opacity: 0.9; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <span class="emoji-deco">🗾🚗🌸</span>
+  <div class="hero-badge">✈ 6-Person Family Road Trip 2026</div>
+  <h1>北海道 道東・道北<br>六人大家庭自駕遊</h1>
+  <p class="hero-sub">2026年 7月20日（一）→ 7月30日（四）｜11天10夜・本人・姊妹・妻子・成年女兒・父母（75歲以上）</p>
+  <div class="hero-stats">
+    <div class="stat-box">
+      <span class="num">11</span>
+      <span class="label">天數</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">6</span>
+      <span class="label">家庭成員</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">18+</span>
+      <span class="label">精選景點</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">~1,800</span>
+      <span class="label">總車程 km</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">♿ 友好</span>
+      <span class="label">長者無障礙</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">7月</span>
+      <span class="label">薰衣草盛開</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TABS ===== -->
+<div class="tab-nav">
+  <button class="tab-btn" onclick="switchTab('itinerary', this)">🗓 行程總覽</button>
+  <button class="tab-btn" onclick="switchTab('attractions', this)">🏛 景點</button>
+  <button class="tab-btn" onclick="switchTab('food', this)">🍜 美食</button>
+  <button class="tab-btn" onclick="switchTab('info', this)">🚗 交通 &amp; 實用資訊</button>
+</div>
+
+<!-- ===== TAB 1: ITINERARY ===== -->
+<div class="tab-content" id="tab-itinerary">
+  <div class="container">
+
+    <div class="regions-grid">
+      <div class="region-card east">
+        <h3>🌊 道東（Dōtō）</h3>
+        <p>北海道東部的大自然秘境——知床世界遺產、神秘道東三湖（摩周湖・屈斜路湖・阿寒湖）、硫磺山活火山、帶廣美食與釧路濕原，是日本最原始壯美的自然區域。</p>
+      </div>
+      <div class="region-card north">
+        <h3>🌸 道北（Dōhoku）</h3>
+        <p>北海道北部的花田王國——7月正是旭川旭山動物園、美瑛青池、富良野薰衣草花田最鼎盛的季節！色彩繽紛的花丘讓人嘆為觀止，是全家遊的完美收尾。</p>
+      </div>
+    </div>
+
+    <!-- Family Members Banner -->
+    <div class="family-banner">
+      <div style="flex:1;min-width:200px;">
+        <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;color:#7b4fa0;margin-bottom:8px;">👨‍👩‍👧‍👦 家庭成員 6 人</div>
+        <p style="font-size:0.85rem;color:#5a6a7e;">行程已針對 <strong>75歲以上長者</strong>（父母）作特別無障礙規劃，景點、住宿、交通全部兼顧長者需要。</p>
+      </div>
+      <div class="family-member"><span class="m-icon">🧑</span><span class="m-label">本人</span><span class="m-note">主駕駛</span></div>
+      <div class="family-member"><span class="m-icon">👩</span><span class="m-label">姊妹</span><span class="m-note">副駕駛</span></div>
+      <div class="family-member"><span class="m-icon">👩‍❤️‍👨</span><span class="m-label">妻子</span><span class="m-note"></span></div>
+      <div class="family-member"><span class="m-icon">👧</span><span class="m-label">成年女兒</span><span class="m-note"></span></div>
+      <div class="family-member" style="border:2px solid rgba(155,109,191,0.3);">
+        <span class="m-icon">👴</span><span class="m-label">父親</span><span class="m-note" style="color:#9b6dbf;">75歲+</span>
+      </div>
+      <div class="family-member" style="border:2px solid rgba(155,109,191,0.3);">
+        <span class="m-icon">👵</span><span class="m-label">母親</span><span class="m-note" style="color:#9b6dbf;">75歲+</span>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>📺 行程靈感來源 ｜ 長者友善規劃重點</h3>
+      <p>本行程根據 YouTube 兩個北海道道東旅遊播放清單深度分析而成，涵蓋道東三湖攻略、知床自駕秘訣、網走夏日景點、帶廣六花の森等親身體驗影片，並特別針對家中 <strong>75歲以上父母</strong> 作出調整：避開長途步行景點、選擇升降機酒店、建議充足休息時間、標示每個景點的無障礙設施情況，確保全家大小都能輕鬆享受北海道之旅。</p>
+    </div>
+
+    <p class="section-title">🗓 逐日行程 <span>（點擊每天展開詳情）</span></p>
+    <p class="section-subtitle">新千歲機場出發 → 道東深度遊 → 道北花田 → 回新千歲 | 全程自駕</p>
+
+    <div class="timeline">
+
+      <!-- Day 1 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day1')">
+          <div class="day-num">Day 1<br><small>7/20</small></div>
+          <div class="day-info">
+            <div class="day-title">✈ 抵達北海道 → 帶廣</div>
+            <div class="day-subtitle">新千歲機場 → 租車 → 帶廣（約240km / 2.5小時）</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body" id="day1">
+          <ul class="activity-list">
+            <li><span class="activity-icon">✈</span><span>抵達 <strong>新千歲機場（CTS）</strong>，辦理入境、取行李</span></li>
+            <li><span class="activity-icon">🚗</span><span><strong>租車手續（重要！6人行）</strong>：共 6 人建議租 <strong>2 部車</strong>（各3人）或 1 部 <strong>Toyota HiAce 寬體廂型車（9人座）</strong>。推薦方案：長者（父母）坐前排寬敞座位，上落方便；HiAce 後排空間寬裕，長途行車舒適。提前至少 1 個月網上預訂！</span></li>
+            <li><span class="activity-icon">♿</span><span><strong>長者上落車提示</strong>：租車時申請附帶「シートベルトアシスト（安全帶助手）」功能車款；若父母行動不便，可詢問是否備有「スロープ（坡道）」輔助。HiAce 車門較寬，長者上落更方便。</span></li>
+            <li><span class="activity-icon">🛣</span><span>行駛道東自動車道前往 <strong>帶廣（Obihiro）</strong>，全程約 240km，預計 2.5 小時</span></li>
+            <li><span class="activity-icon">🛒</span><span>途中可於 <strong>道之駅</strong> 休息，購買北海道限定零食及新鮮農產品</span></li>
+            <li><span class="activity-icon">🍽</span><span>晚餐：<strong>帯廣豚丼</strong>——名物炭烤豬肉丼飯，推薦「元祖帶廣豚丼 一福」或「豚丼本舗 TONTON」</span></li>
+            <li><span class="activity-icon">🏨</span><span>抵達酒店，早休息，明天開始密集道東之旅</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>自駕提醒：</strong>北海道道路筆直開闊，限速通常100km/h，但道路兩側常有鹿出沒，夜間請格外小心！建議白天行駛。</div>
+          <div class="stay-info">🏨 今晚住宿：帶廣市区（推薦 <strong>裡滿士飯店 / Rimse Obihiro</strong> 或 <strong>帶廣廣場酒店</strong>）</div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day2')">
+          <div class="day-num">Day 2<br><small>7/21</small></div>
+          <div class="day-info">
+            <div class="day-title">🌸 帶廣深度遊｜六花の森・幸福駅</div>
+            <div class="day-subtitle">帶廣市區 → 六花の森 → 幸福駅/愛国駅 → 帶廣賽馬</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day2">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌺</span><span><strong>六花の森（Rokka no Mori）</strong>：六花亭旗下的夢幻森林花園，7月份百合花盛開，宛如仙境。門票大人1000円，小學生500円。</span></li>
+            <li><span class="activity-icon">🍫</span><span><strong>六花亭本店（帶廣）</strong>：購買北海道最著名的奶油夾心餅乾「マルセイバターサンド」，現場還有即食限定甜品！</span></li>
+            <li><span class="activity-icon">🚉</span><span><strong>幸福駅（Shiawase Eki）</strong> & <strong>愛国駅（Aikoku Eki）</strong>：昔日國鐵廢棄站，因「從愛到幸福」的浪漫名字成為知名景點，免費參觀，適合拍照</span></li>
+            <li><span class="activity-icon">🐎</span><span><strong>帯広競馬場（Obihiro Racecourse）</strong>：世界唯一的「輓曳競馬」——巨型輓馬拉雪橇比賽，7月有夏季賽事，非常壯觀，小孩一定喜歡！</span></li>
+            <li><span class="activity-icon">🛍</span><span>晚餐：帶廣「インデアン」咖喱飯——在地人從小吃到大的咖喱連鎖，物美價廉</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>六花の森小提示：</strong>最好上午前往，避開人群。花園內有咖啡廳，可享用六花亭限定甜品。</div>
+          <div class="stay-info">🏨 今晚住宿：帶廣（同上）</div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day3')">
+          <div class="day-num">Day 3<br><small>7/22</small></div>
+          <div class="day-info">
+            <div class="day-title">🦢 釧路濕原・丹頂鶴之鄉</div>
+            <div class="day-subtitle">帶廣 → 釧路濕原 → 釧路漁港（約1.5小時車程）</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day3">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌿</span><span><strong>釧路濕原展望台</strong>：日本最大的濕地，蒼茫無邊的蘆葦美景，可俯瞰釧路川蜿蜒穿越濕原的壯麗景色</span></li>
+            <li><span class="activity-icon">🔭</span><span><strong>細岡展望台（Hosooka Lookout）</strong>：濕原最佳觀景點之一，晴天可見整片濕原全貌，夕陽時分尤為震撼</span></li>
+            <li><span class="activity-icon">🦅</span><span><strong>丹頂の里（鶴居村）</strong>：釧路鶴居村丹頂鶴自然公園，雖然夏天並非丹頂鶴聚集高峰，仍可能見到少數留鳥</span></li>
+            <li><span class="activity-icon">🎣</span><span><strong>釧路漁人碼頭 MOO</strong>：釧路港漁人碼頭商場，有各種海鮮直銷店與餐廳，7月新鮮海膽正當季！</span></li>
+            <li><span class="activity-icon">🍽</span><span>晚餐：<strong>炉端焼（爐端燒）</strong>——釧路的在地飲食文化，圍爐烤海鮮，必吃 Shishamo（柳葉魚）</span></li>
+          </ul>
+          <div class="tip-box">💡 釧路是北海道夏天最涼快的地方，平均氣溫只有15-20°C，7月是避暑勝地。帶輕薄外套！</div>
+          <div class="stay-info">🏨 今晚住宿：釧路市（推薦 <strong>ANAクラウンプラザホテル釧路</strong> 或 <strong>王子飯店</strong>）</div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day4')">
+          <div class="day-num">Day 4<br><small>7/23</small></div>
+          <div class="day-info">
+            <div class="day-title">🌋 道東三湖①｜摩周湖・硫磺山・屈斜路湖</div>
+            <div class="day-subtitle">釧路 → 弟子屈（硫磺山 → 摩周湖 → 屈斜路湖砂湯）</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day4">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌋</span><span><strong>硫磺山（Iozan）</strong>：仍在活動的活火山，地面不斷噴出白色硫磺煙霧，距離火口僅數米！免費入場，震撼視覺體驗。現場有賣用地熱烤熟的玉米！</span></li>
+            <li><span class="activity-icon">💙</span><span><strong>摩周湖第一展望台</strong>：世界透明度最高的湖之一，湖水深藍神秘，晴天呈現令人窒息的鈷藍色。若有迷霧則稱「霧の摩周湖」更有詩意！</span></li>
+            <li><span class="activity-icon">🔭</span><span><strong>摩周湖第三展望台（影片強力推薦）</strong>：比第一展望台視角更震撼，可見湖中小島「カムイシュ島」，較少遊客，更值得一去</span></li>
+            <li><span class="activity-icon">♨</span><span><strong>屈斜路湖 砂湯（RECAMP 砂湯）</strong>：全家最愛！湖邊沙灘下方有天然溫泉，用手挖開沙子即可浸泡熱泉，是北海道最獨特的體驗之一</span></li>
+            <li><span class="activity-icon">🍜</span><span>晚餐：<strong>弟子屈拉麵（総本店）</strong>——道東最著名的拉麵，濃郁魚介湯底，強烈推薦！影片中特別介紹的必吃美食</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>砂湯小提示：</strong>帶備泳衣或短褲、毛巾，可以直接在沙灘上挖砂浴！夏天下午人較多，建議早上或傍晚前往。</div>
+          <div class="senior-alert">♿ <strong>長者友善評估：</strong>硫磺山地面略有起伏，長者穿防滑平底鞋可輕鬆步行。摩周湖展望台有停車場，步行至觀景台只需 <strong>2-5分鐘</strong>，非常適合長者。屈斜路湖砂湯沙灘平坦，長者坐在沙灘椅享受自然溫泉即可，無需長途步行。</div>
+          <div class="stay-info">🏨 今晚住宿：弟子屈町 / 川湯温泉（推薦 <strong>川湯観光ホテル</strong> 或 <strong>ホテルパークウェイ</strong>）</div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day5')">
+          <div class="day-num">Day 5<br><small>7/24</small></div>
+          <div class="day-info">
+            <div class="day-title">🦋 道東三湖②｜阿寒湖・愛努族文化</div>
+            <div class="day-subtitle">弟子屈 → 北海道夢幻橋 → 阿寒湖（阿寒摩周國立公園）</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day5">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌉</span><span><strong>北海道夢幻橋</strong>：途中必打卡的神秘橋樑，橋身被茂密樹林包圍，夏日光線穿透林間，宛如童話場景</span></li>
+            <li><span class="activity-icon">🌽</span><span><strong>路邊玉米攤</strong>：影片特別介紹！農田邊自售新鮮北海道玉米，甜度驚人，直接現場吃是一大享受</span></li>
+            <li><span class="activity-icon">🪶</span><span><strong>阿寒湖愛努族民俗村（阿寒湖アイヌコタン）</strong>：日本最大的愛努族聚落，有傳統舞蹈表演、手工藝品店、傳統食品，深度了解北海道原住民文化</span></li>
+            <li><span class="activity-icon">⛵</span><span><strong>阿寒湖遊覧船</strong>：乘坐観光船環遊阿寒湖，途中可參觀「まりも（毬藻）」展示——世界稀有的球狀藻類，是阿寒湖的象徵</span></li>
+            <li><span class="activity-icon">🏞</span><span><strong>阿寒摩周國立公園</strong>：阿寒湖周邊徒步路線，欣賞北海道原始針葉林美景</span></li>
+            <li><span class="activity-icon">🦌</span><span>傍晚在湖邊漫步，運氣好可見野生蝦夷鹿（エゾシカ）出沒</span></li>
+          </ul>
+          <div class="tip-box">💡 阿寒湖溫泉街晚上可逛，有各種伴手禮店和溫泉旅館。愛努族舞蹈表演每晚固定時間演出，建議查詢當晚場次。</div>
+          <div class="senior-alert">♿ <strong>長者友善評估：</strong>阿寒湖民俗村地面平坦，長者可坐輪椅或緩步遊覽。愛努族舞蹈表演在室內劇場，有座椅，非常適合長者欣賞。遊覧船有座位，長者乘坐舒適。建議住宿選擇有 <strong>無障礙客房（バリアフリールーム）</strong> 的溫泉旅館，可提前電話確認。</div>
+          <div class="stay-info">🏨 今晚住宿：阿寒湖温泉（推薦 <strong>阿寒湖荘</strong> 或 <strong>NEW 阿寒ホテル</strong>，湖景房 + 必選無障礙/電梯房型）</div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day6')">
+          <div class="day-num">Day 6<br><small>7/25</small></div>
+          <div class="day-info">
+            <div class="day-title">🚔 網走・鄂霍次克海岸</div>
+            <div class="day-subtitle">阿寒湖 → 網走（約1.5小時）→ 網走監獄 → 鄂霍次克</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day6">
+          <ul class="activity-list">
+            <li><span class="activity-icon">⛓</span><span><strong>網走監獄博物館（博物館網走監獄）</strong>：日本最有名的舊監獄開放參觀，原汁原味保留的木造監舍群，有蠟像人偶重現昔日囚犯生活，大人小孩都大開眼界</span></li>
+            <li><span class="activity-icon">🏔</span><span><strong>天都山展望台</strong>：可遠眺鄂霍次克海、網走湖、能取湖的360度全景展望台，天氣好時視野極佳</span></li>
+            <li><span class="activity-icon">❄</span><span><strong>鄂霍次克流冰館</strong>：即使夏天也能在館內體驗零下18度的流冰環境，見識北海道冬天的流冰奇觀，非常有趣的互動體驗</span></li>
+            <li><span class="activity-icon">🌊</span><span><strong>能取湖畔散步</strong>：開車繞湖一圈，欣賞被茂草包圍的靜謐湖景（9月是珊瑚草紅色花海，7月則是青翠的夏日風光）</span></li>
+            <li><span class="activity-icon">🦀</span><span>晚餐：網走港海鮮——毛蟹、鮭魚、海膽，夏天正是新鮮海膽的季節！</span></li>
+          </ul>
+          <div class="tip-box">💡 影片「夏日北海道避暑之旅怎能不去一趟道東的網走！」（老宋CHANNEL）強力推薦網走作為道東行程必到之站。7月網走平均氣溫僅18°C，非常舒適！</div>
+          <div class="stay-info">🏨 今晚住宿：網走市（推薦 <strong>東橫Inn 網走站前</strong> 或 <strong>ホテルルートイン網走</strong>）</div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day7')">
+          <div class="day-num">Day 7<br><small>7/26</small></div>
+          <div class="day-info">
+            <div class="day-title">🦅 知床入住｜知床五湖・觀光船</div>
+            <div class="day-subtitle">網走 → 知床烏取羅（約1小時）→ 知床五湖 → 觀光船</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day7">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌲</span><span><strong>知床五湖（Shiretoko Goko）</strong>：UNESCO 世界自然遺產，5個湛藍湖泊隱藏於原始森林中，7月是開放「地上步道自由散步」期（需登記），可沿木棧道輕鬆遊覽，極有可能近距離見到棕熊！</span></li>
+            <li><span class="activity-icon">⛵</span><span><strong>知床観光船（ゴジラ岩観光）</strong>：乘船沿知床半島海岸航行，欣賞奇岩峭壁、瀑布飛濺入海、野生棕熊在岸邊覓食的壯觀畫面——這是整個行程最難忘的體驗！</span></li>
+            <li><span class="activity-icon">🌅</span><span><strong>知床峠（Shiretoko Touge）</strong>：連接宇登呂與羅臼的高山公路，晴天可見國後島，被譽為北海道最美的高山駕駛路段</span></li>
+            <li><span class="activity-icon">🐻</span><span>傍晚可在酒店前的海岸散步，黃昏時分野生棕熊常在附近海岸覓食，是難得的野生動物觀察機會</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>知床五湖重要提醒：</strong>7月開放「地上步道自由散步」但需在入口處登記，並觀看5分鐘熊出沒注意影片。帶備防熊噴霧（可現場租借）。</div>
+          <div class="senior-alert">♿ <strong>長者友善方案（重要！）：</strong>知床五湖地上步道全程約 <strong>3km（2-3小時）</strong>，對75歲以上長者可能負擔較重。<strong>建議方案：</strong>①年輕成員完成地上步道，②長者可走「高架木道（短版 800m，約40分鐘，平坦無障礙）」，從1號湖展望台遠眺即可，景色已非常美麗。高架木道不需登記，可隨時進入，完全適合長者。兩組人在入口廣場匯合。</div>
+          <div class="stay-info">🏨 今晚住宿：宇登呂温泉（推薦 <strong>知床グランドホテル北こぶし</strong>——設有電梯、無障礙客房，長者首選）</div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day8')">
+          <div class="day-num">Day 8<br><small>7/27</small></div>
+          <div class="day-info">
+            <div class="day-title">⭐ 知床深度遊｜羅臼・觀星</div>
+            <div class="day-subtitle">宇登呂 → 知床峠 → 羅臼 → 深夜觀星</div>
+          </div>
+          <span class="day-region region-east">道東</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day8">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🛣</span><span><strong>知床峠ドライブ</strong>：清早翻越知床峠（738m），晴天可望見俄羅斯領土國後島，絕景山路是北海道最美駕駛體驗之一</span></li>
+            <li><span class="activity-icon">🦅</span><span><strong>羅臼（Rausu）</strong>：知床半島東側小鎮，以虎頭海鷹（オジロワシ）和抹香鯨聞名，夏季有深海觀鯨船出發，是特別的家庭體驗</span></li>
+            <li><span class="activity-icon">🦭</span><span><strong>羅臼岳ビジターセンター</strong>：了解知床國立公園的生態系統，有精彩的棕熊、虎頭海鷹標本展示，適合帶小孩參觀學習</span></li>
+            <li><span class="activity-icon">🌿</span><span><strong>フレペの滝（乙女の涙）</strong>：從懸崖頂徒步約1.5km可抵達「乙女の涙」瀑布展望台，瀑布直接從峭壁流入大海，原始震撼</span></li>
+            <li><span class="activity-icon">⭐</span><span><strong>深夜觀星</strong>：知床遠離城市光污染，夏夜晴天可見銀河橫跨天際，被視為北海道最佳觀星地點之一（影片有特別介紹）</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>觀鯨船提醒：</strong>羅臼觀鯨船全年出發，7-8月是座頭鯨、虎頭海鷹出沒的旺季，成功率非常高，建議提前預訂（約¥8,000/人）。</div>
+          <div class="senior-alert">♿ <strong>長者友善評估：</strong>羅臼觀鯨船大型船（ランドマーク観光船）有室內座位和廁所，長者可在室內欣賞；小型速艇則不建議長者乘坐（震動大、上落困難）。知床觀星活動需在户外站立，如長者怕冷或腳力不佳，可在酒店陽台觀星。</div>
+          <div class="stay-info">🏨 今晚住宿：宇登呂温泉（同昨晚酒店）</div>
+        </div>
+      </div>
+
+      <!-- Day 9 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day9')">
+          <div class="day-num">Day 9<br><small>7/28</small></div>
+          <div class="day-info">
+            <div class="day-title">🎡 移往旭川（道北）｜旭山動物園</div>
+            <div class="day-subtitle">知床 → 美幌峠 → 旭川（約4.5小時，中途停留）</div>
+          </div>
+          <span class="day-region region-north">道北</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day9">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🔭</span><span><strong>美幌峠（途中必停！）</strong>：從知床返回的必經之路，峠頂可鳥瞰整個屈斜路湖的壯觀全貌，視野無比開闊，堪稱道東最震撼的展望台</span></li>
+            <li><span class="activity-icon">🚗</span><span>北見IC → 旭川 高速行駛，約3小時，途中可在道之駅休息</span></li>
+            <li><span class="activity-icon">🐧</span><span><strong>旭山動物園（Asahiyama Zoo）</strong>：日本最著名的動物園！企鵝、北極熊、猩猩、狼、雪豹——以「行動展示」方式讓動物展現自然行為，夏季開放至17:00。小孩的天堂！</span></li>
+            <li><span class="activity-icon">🍺</span><span>晚餐：旭川ラーメン——以「濃厚醬油・豚骨」湯底著名，推薦「蜂屋」或「青葉」（本地老字號）</span></li>
+          </ul>
+          <div class="tip-box">💡 旭山動物園夏季7月中旬起有「夜間開放」活動，可欣賞夜行性動物！門票：大人¥820，中學生以下免費。</div>
+          <div class="senior-alert">♿ <strong>長者友善評估：</strong>旭山動物園園內提供 <strong>免費輪椅借用（要押金¥500）</strong>，園區地面硬化平整，長者步行或坐輪椅均可遊覽。部分展館有升降機。建議下午2點後入場，避開早上人流高峰，天氣涼快時體驗更佳。如長者體力不佳，可集中遊覽最精華的企鵝館、北極熊館、猩猩館即可（約1.5-2小時）。</div>
+          <div class="stay-info">🏨 今晚住宿：旭川市（推薦 <strong>JRイン旭川</strong> 或 <strong>ドーミーイン旭川</strong>——兩者均在車站附近，電梯齊全）</div>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day10')">
+          <div class="day-num">Day 10<br><small>7/29</small></div>
+          <div class="day-info">
+            <div class="day-title">🌸 美瑛・富良野｜薰衣草花海盛開！</div>
+            <div class="day-subtitle">旭川 → 美瑛（青池・花丘）→ 富良野（ファーム富田）</div>
+          </div>
+          <span class="day-region region-north">道北</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day10">
+          <ul class="activity-list">
+            <li><span class="activity-icon">💙</span><span><strong>白金 青い池（Blue Pond）</strong>：美瑛最神秘的景點！因火山沉積物呈現神秘的蔚藍色，倒映著白樺樹群，7月是葉綠水藍的最美季節</span></li>
+            <li><span class="activity-icon">🌈</span><span><strong>四季彩の丘</strong>：超過14種色彩的花田整齊排列在緩坡上，遠看如彩虹降落，7月鐵線蓮、薰衣草、波斯菊等同時盛開，是北海道花田的巔峰之作！</span></li>
+            <li><span class="activity-icon">🚗</span><span><strong>パッチワークの路（拼布之路）</strong>：開車沿美瑛丘陵公路漫遊，翻滾的丘陵上鋪滿農田色塊，如同空中俯瞰的拼布藝術</span></li>
+            <li><span class="activity-icon">💜</span><span><strong>ファーム富田（Farm Tomita）</strong>：富良野薰衣草花田的代名詞！7月中下旬是薰衣草最盛的季節，紫色花海配藍天白雲，是北海道夏日最美的圖畫，免費入場</span></li>
+            <li><span class="activity-icon">🍦</span><span><strong>薰衣草霜淇淋</strong>：Farm Tomita 現場限定紫色薰衣草口味霜淇淋，香甜芬芳，不吃後悔！</span></li>
+            <li><span class="activity-icon">🧀</span><span><strong>富良野チーズ工房</strong>：本地自製起司工廠，可參觀製作過程，購買現做起司和北海道牛乳製品</span></li>
+            <li><span class="activity-icon">🍛</span><span>晚餐：<strong>富良野オムカリー</strong>——富良野名物蛋包咖喱飯，用在地蔬菜和雞蛋製作，香濃美味</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>薰衣草最佳觀賞期：</strong>富良野薰衣草通常7月上旬至下旬盛開，7月20-30日正是最高峰！Farm Tomita 人多，建議清早7:30開園時首先前往。</div>
+          <div class="senior-alert">♿ <strong>長者友善評估：</strong>Farm Tomita 花田地面為緩坡草地，長者步行約 <strong>15-30分鐘</strong>即可欣賞主要花田，無需爬山。園內有長椅和遮陽傘，可坐下休息欣賞。四季彩の丘有電動車出租（¥500），長者坐車遊覽花田更舒適。美瑛青池停車場距離觀景台只需步行 <strong>約3分鐘（200m）</strong>，地面平坦，長者完全適合。</div>
+          <div class="stay-info">🏨 今晚住宿：富良野 or 美瑛（推薦 <strong>富良野プリンスホテル</strong>——無障礙設施完善，有大浴場，長者最舒適）</div>
+        </div>
+      </div>
+
+      <!-- Day 11 -->
+      <div class="timeline-item">
+        <div class="day-dot"></div>
+        <div class="timeline-header" onclick="toggleDay('day11')">
+          <div class="day-num">Day 11<br><small>7/30</small></div>
+          <div class="day-info">
+            <div class="day-title">✈ 返程｜新千歲機場・道別北海道</div>
+            <div class="day-subtitle">富良野/美瑛 → 新千歲機場（約2.5小時）→ 出發回家</div>
+          </div>
+          <span class="day-region region-central">返程</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day11">
+          <ul class="activity-list">
+            <li><span class="activity-icon">🌅</span><span>清早最後一次欣賞美瑛丘陵朝霧美景，北海道的早晨空氣清新，讓人依依不捨</span></li>
+            <li><span class="activity-icon">🚗</span><span>前往新千歲機場，全程約2.5小時（建議提前3小時出發，留足還車時間）</span></li>
+            <li><span class="activity-icon">🛍</span><span><strong>新千歲機場 大型購物</strong>：機場內有北海道最大的特產賣場！六花亭、白色戀人、Royce'生巧克力、LeTAO 起司蛋糕——最後一次掃貨！</span></li>
+            <li><span class="activity-icon">🍣</span><span><strong>機場內海鮮丼</strong>：機場3F 有多家優質海鮮餐廳，可享用最後一頓北海道海鮮大餐再踏上歸途</span></li>
+            <li><span class="activity-icon">✈</span><span>登機，帶著滿滿的北海道回憶回家！</span></li>
+          </ul>
+          <div class="tip-box">💡 <strong>還車提醒：</strong>租車公司要求提前1小時還車，新千歲機場租車公司有免費接駁車往返機場大樓。確保油箱加滿油再還車。</div>
+          <div class="stay-info">✈ 北海道道東・道北 11天10夜家庭自駕遊 圓滿結束！</div>
+        </div>
+      </div>
+
+    </div><!-- end timeline -->
+  </div>
+</div>
+
+<!-- ===== TAB 2: ATTRACTIONS ===== -->
+<div class="tab-content" id="tab-attractions">
+  <div class="container">
+    <p class="section-title">🏛 精選景點 <span>｜道東 & 道北</span></p>
+    <p class="section-subtitle">根據 YouTube 旅遊影片深度分析，精選18個最值得前往的景點</p>
+
+    <div class="cards-grid">
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">💙</span>
+          <div class="card-name">摩周湖</div>
+          <div class="card-location">北海道 弟子屈町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 第三展望台視野更震撼，影片強力推薦！</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-must">必去</span><span class="card-tag tag-nature">自然</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>世界透明度最高的湖泊之一，湖水深藍神秘。有第一展望台（最容易到達）和第三展望台（視野更震撼）。晴天呈現鈷藍色，有迷霧時被稱為「霧の摩周湖」同樣令人著迷。免費停車，僅收停車費。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top orange"></div>
+        <div class="card-body">
+          <span class="card-emoji">🌋</span>
+          <div class="card-name">硫磺山</div>
+          <div class="card-location">北海道 弟子屈町</div>
+          <div class="stars">★★★★☆</div>
+          <div class="card-tip">💡 免費入場！地熱烤玉米現場購買必吃</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>仍在活動的活火山，距火山口近在咫尺，硫磺煙霧不斷噴出，地面滾燙。附近商家用地熱烤玉米和雞蛋出售，是獨特的道東體驗。免費入場，自駕停車場收費¥500。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">♨</span>
+          <div class="card-name">屈斜路湖 砂湯</div>
+          <div class="card-location">北海道 弟子屈町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 帶泳衣！沙灘下有天然溫泉，小孩最愛</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>湖邊沙灘地下湧出天然溫泉，用手挖開沙子即可浸泡，免費體驗。RECAMP砂湯是附近的露營場，傍晚夕陽倒映湖面，美得令人屏息。旁邊有天鵝棲息。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top green"></div>
+        <div class="card-body">
+          <span class="card-emoji">🪶</span>
+          <div class="card-name">阿寒湖愛努族民俗村</div>
+          <div class="card-location">北海道 釧路市 阿寒湖温泉</div>
+          <div class="stars">★★★★☆</div>
+          <div class="card-tip">💡 傳統舞蹈每晚演出，可預購座位</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">文化</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>日本最大的愛努族聚落，有約30間手工藝品店和傳統食品店，以及傳統舞蹈劇場「イコロ」每晚演出（入場費¥1,080）。阿寒湖遊覧船可從此處出發，觀看毬藻展示。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">🌲</span>
+          <div class="card-name">知床五湖</div>
+          <div class="card-location">北海道 斜里郡 斜里町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 7月可自由散步，但需登記+觀看熊視頻</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-must">必去</span><span class="card-tag tag-nature">世遺</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>UNESCO 世界自然遺產，5個原始湖泊隱藏於原始森林中，湖水清澈如鏡，倒映知床連峰。7月至8月開放「地上步道自由散步」，免費但需在入口登記並觀看5分鐘熊出沒安全說明。棕熊出沒頻繁，請嚴格遵守指引。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top orange"></div>
+        <div class="card-body">
+          <span class="card-emoji">⛵</span>
+          <div class="card-name">知床觀光船</div>
+          <div class="card-location">北海道 斜里郡 知床</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 可能看到棕熊在岸邊覓食！提前網上預訂</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>乘坐觀光船沿知床半島航行，欣賞奇岩峭壁、瀑布直入大海，以及野生棕熊在海岸覓食的震撼畫面。推薦「ゴジラ岩観光」大型船（¥3,300/人）或小型船（¥6,600/人，視野更佳）。航程約1.5-3小時。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">⛓</span>
+          <div class="card-name">網走監獄博物館</div>
+          <div class="card-location">北海道 網走市</div>
+          <div class="stars">★★★★☆</div>
+          <div class="card-tip">💡 大人小孩都喜歡！蠟像展示栩栩如生</div>
+          <span class="card-tag tag-east">道東</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>原汁原味保留明治時代的舊監獄建築群（全部為國家重要文化財），蠟像人偶重現囚犯勞動生活。可了解北海道開拓時期的歷史。門票：大人¥1,500，小學生¥750。需2-3小時參觀。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top green"></div>
+        <div class="card-body">
+          <span class="card-emoji">🌿</span>
+          <div class="card-name">釧路濕原</div>
+          <div class="card-location">北海道 釧路市</div>
+          <div class="stars">★★★★☆</div>
+          <div class="card-tip">💡 細岡展望台是最佳觀景點，夕陽時分尤美</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">自然</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>日本最大的濕地，面積19,000公頃，是丹頂鶴的重要棲息地。細岡展望台可俯瞰釧路川蜿蜒穿越廣大蘆葦原的全景。夏季可搭乘「くしろ湿原ノロッコ号」慢車欣賞沿途濕原風光。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top green"></div>
+        <div class="card-body">
+          <span class="card-emoji">🌸</span>
+          <div class="card-name">六花の森</div>
+          <div class="card-location">北海道 中川郡 中札内村</div>
+          <div class="stars">★★★★☆</div>
+          <div class="card-tip">💡 六花亭甜品在此限定販售，園區美不勝收</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">自然</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>六花亭旗下打造的森林花園，7月百合花、芙蓉花盛開。園內有六花亭美術館（展示包裝設計原畫）和限定甜品咖啡廳。門票：大人¥1,000，小學生¥500。適合全家悠閒半天遊。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top orange"></div>
+        <div class="card-body">
+          <span class="card-emoji">🐧</span>
+          <div class="card-name">旭山動物園</div>
+          <div class="card-location">北海道 旭川市</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 日本最受歡迎動物園！小孩必去，票價超值</div>
+          <span class="card-tag tag-north">道北</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>以「行動展示」聞名日本，讓動物以自然方式活動——企鵝空中飛翔、北極熊水中游泳、長頸鹿近距離接觸。夏季有夜間開放活動。門票：大人¥820，中學生以下免費。每天開放到17:00（夏季延長）。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">💙</span>
+          <div class="card-name">白金 青い池</div>
+          <div class="card-location">北海道 上川郡 美瑛町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 早上光線最佳，避開下午人潮</div>
+          <span class="card-tag tag-north">道北</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>因地下水含有氫氧化鋁，湖水呈現神秘的青藍色。枯立的白樺樹倒映湖中，7月是葉綠水藍最美的季節。Apple 曾將此景作為 Mac 桌布。夜間有燈光秀（需查詢日期）。免費入場，停車¥500。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top green"></div>
+        <div class="card-body">
+          <span class="card-emoji">💜</span>
+          <div class="card-name">Farm Tomita 薰衣草花田</div>
+          <div class="card-location">北海道 空知郡 中富良野町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 7月20日後是薰衣草最盛期！免費入場</div>
+          <span class="card-tag tag-north">道北</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>北海道薰衣草的象徵，每年7月吸引數十萬遊客。多個主題花圃——薰衣草田、彩色花田、溫室區，免費入場。現場可購買薰衣草精油、薰衣草霜淇淋（必吃！）、薰衣草系列產品。7月20日前後是盛開最高峰。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top orange"></div>
+        <div class="card-body">
+          <span class="card-emoji">🌈</span>
+          <div class="card-name">四季彩の丘</div>
+          <div class="card-location">北海道 上川郡 美瑛町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 可租電動車（¥500）遊覽整個花田丘陵</div>
+          <span class="card-tag tag-north">道北</span><span class="card-tag tag-must">必去</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>超過14種色彩的花卉整齊排列在丘陵上，遠看如彩虹。7月有薰衣草、波斯菊、百日草、向日葵、金盞花等多種花卉同時盛開。可步行或租借電動車遊覽。入場免費，停車¥500。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attraction-card">
+        <div class="card-top blue"></div>
+        <div class="card-body">
+          <span class="card-emoji">🔭</span>
+          <div class="card-name">美幌峠展望台</div>
+          <div class="card-location">北海道 網走郡 美幌町</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-tip">💡 從道東回程必經，絕不能跳過！</div>
+          <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">展望</span>
+          <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+          <div class="detail-content">
+            <p>北海道最著名的展望台之一，從峠頂可俯瞰屈斜路湖（日本最大的火山口湖）的壯闊全貌，晴天可見湖中中島。影片「北海道最神秘的湖」特別介紹。旁邊有道之駅可休息。免費停車。</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end cards grid -->
+  </div>
+</div>
+
+<!-- ===== TAB 3: FOOD ===== -->
+<div class="tab-content" id="tab-food">
+  <div class="container">
+    <p class="section-title">🍜 道東・道北 <span>美食精選</span></p>
+    <p class="section-subtitle">根據 YouTube 旅遊影片推薦 + 北海道7月當季必吃美食</p>
+
+    <div class="food-grid">
+
+      <div class="food-card">
+        <div class="food-emoji">🍜</div>
+        <div class="food-info">
+          <h4>弟子屈拉麵</h4>
+          <div class="food-location">📍 弟子屈町 總本店</div>
+          <div class="food-price">¥ 約¥1,200/碗</div>
+          <span class="food-label label-must">必吃</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">道東最著名的拉麵！濃郁魚介・昆布湯底，在地食材製成。YouTube 影片反覆強力推薦，是整個道東行程的美食高峰之一。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🥩</div>
+        <div class="food-info">
+          <h4>帶廣豚丼</h4>
+          <div class="food-location">📍 帶廣市（一福 / TONTON）</div>
+          <div class="food-price">¥¥ 約¥1,000-1,500</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">帶廣名物！炭火烤制的豬肉片鋪在大碗白飯上，淋上甜鹹秘製醬汁，是十勝平原牧場文化的美食結晶。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🦀</div>
+        <div class="food-info">
+          <h4>北海道毛蟹</h4>
+          <div class="food-location">📍 網走・釧路 漁港</div>
+          <div class="food-price">¥¥¥ 市價</div>
+          <span class="food-label label-must">必吃</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">北海道最著名的海鮮！YouTube 影片特別推薦登別「超甜毛蟹套餐」。7月是北海道毛蟹的豐收季節，蟹肉飽滿鮮甜。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🐟</div>
+        <div class="food-info">
+          <h4>釧路炉端焼</h4>
+          <div class="food-location">📍 釧路 fisherman's wharf MOO</div>
+          <div class="food-price">¥¥ 約¥2,000-3,000</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">釧路獨有的飲食文化——圍爐炭烤海鮮，必吃「ししゃも（柳葉魚）」、花咲蟹、帆立貝。炉端街集中多間老字號。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🍫</div>
+        <div class="food-info">
+          <h4>六花亭 バターサンド</h4>
+          <div class="food-location">📍 帶廣市 / 六花の森</div>
+          <div class="food-price">¥ 約¥200/個</div>
+          <span class="food-label label-must">必買</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">北海道最具代表性的手信！奶油夾心餅乾「マルセイバターサンド」是北海道土產之王。六花の森有限定甜品，只有現場才能吃到。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🌽</div>
+        <div class="food-info">
+          <h4>北海道農場甜玉米</h4>
+          <div class="food-location">📍 道東 農道路邊攤</div>
+          <div class="food-price">¥ 約¥300/根</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">YouTube 影片特別介紹！農夫在玉米田旁自售剛採摘的新鮮玉米，水煮或烤制，甜度驚人。7-8月是最佳採收季節。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">💜</div>
+        <div class="food-info">
+          <h4>薰衣草霜淇淋</h4>
+          <div class="food-location">📍 Farm Tomita, 富良野</div>
+          <div class="food-price">¥ 約¥500</div>
+          <span class="food-label label-must">必吃</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">Farm Tomita 限定！真正薰衣草製成的紫色霜淇淋，淡淡花香配北海道鮮奶，是富良野最具代表性的打卡甜品。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🍛</div>
+        <div class="food-info">
+          <h4>富良野オムカリー</h4>
+          <div class="food-location">📍 富良野市區各餐廳</div>
+          <div class="food-price">¥¥ 約¥1,500</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">富良野名物蛋包咖喱飯，用在地農場雞蛋包裹香濃咖喱，配上十勝蔬菜，是道北旅行的完美一餐。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🍣</div>
+        <div class="food-info">
+          <h4>北海道海膽（夏季當季）</h4>
+          <div class="food-location">📍 網走・小樽 海鮮市場</div>
+          <div class="food-price">¥¥¥ 約¥3,000-5,000/份</div>
+          <span class="food-label label-must">季節限定</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">7月正是北海道馬糞海膽（エゾバフンウニ）和白海膽的旺季！濃甜的海膽覆蓋在白飯上，是夏季北海道最奢華的美食體驗。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🍜</div>
+        <div class="food-info">
+          <h4>旭川ラーメン</h4>
+          <div class="food-location">📍 旭川市（蜂屋 / 青葉）</div>
+          <div class="food-price">¥ 約¥900-1,200</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">旭川獨創的「濃厚醬油・雙湯底」拉麵，豬骨+雞骨+昆布熬製，麵條硬直不易吸水。蜂屋創業70年，青葉是在地人最愛。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🧀</div>
+        <div class="food-info">
+          <h4>富良野起司工房</h4>
+          <div class="food-location">📍 富良野市 チーズ工房</div>
+          <div class="food-price">¥¥ 約¥1,000-2,000</div>
+          <span class="food-label label-local">在地特色</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">北海道牛乳製成的新鮮起司，工廠直銷、價格實惠。可參觀製作過程，試食多種口味，購買起司拼盤和北海道牛乳商品。</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🎂</div>
+        <div class="food-info">
+          <h4>新千歲機場限定土産</h4>
+          <div class="food-location">📍 新千歲機場 3F</div>
+          <div class="food-price">¥-¥¥¥</div>
+          <span class="food-label label-must">必買</span>
+          <p style="font-size:0.82rem;color:#6a7a8e;margin-top:6px;">返程前最後掃貨機會！白色戀人、Royce'生巧克力（需冷藏）、LeTAO 起司蛋糕（2種口味）、六花亭、帶廣豚丼醬汁組合裝。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 4: INFO ===== -->
+<div class="tab-content" id="tab-info">
+  <div class="container">
+    <p class="section-title">🚗 交通 &amp; <span>實用資訊</span></p>
+    <p class="section-subtitle">自駕遊必知攻略 | 根據 YouTube 旅遊影片整理的重要提示</p>
+
+    <div class="budget-total">
+      <p>🏠 六人大家庭預算參考（11天10夜）</p>
+      <div class="big">¥ 600,000 ~ 900,000</div>
+      <p>約 HK$30,000 ~ HK$45,000（6人合計）｜ 人均約 HK$5,000 ~ HK$7,500</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>🚗 自駕交通（6人規劃）</h3>
+        <ul>
+          <li><strong>租車方案 A（推薦）：</strong>1 部 <strong>Toyota HiAce</strong>（廂型9人座）——全家同行，長者坐前排方便；費用約¥15,000-22,000/天</li>
+          <li><strong>租車方案 B：</strong>2 部 Toyota Alphard 或 Hiace Wagon（各3人）——更靈活，長者可按需休息</li>
+          <li><strong>ETC卡：</strong>每部車申請 ETC 卡，走高速更便利（約¥1,000押金）</li>
+          <li><strong>油費估算：</strong>1,800km × ¥180/L ≈ 約¥50,000（HiAce 較耗油）</li>
+          <li><strong>全保保險：</strong>強力購買 CDW+NOC 全險（約¥3,000-4,000/天）</li>
+          <li><strong>駕駛輪換：</strong>6人行程長，建議本人和姊妹輪換駕駛，每段不超過2小時</li>
+          <li><strong>長者休息站：</strong>每1.5小時在道之駅停車休息，讓長者下車伸展</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>🏨 住宿參考（6人・長者友善）</h3>
+        <ul>
+          <li><strong>帶廣（2晚）：</strong>¥20,000-35,000/晚 6人 | 需 2 間房</li>
+          <li><strong>釧路（1晚）：</strong>¥25,000-40,000/晚 6人 | ANA Crown</li>
+          <li><strong>弟子屈（1晚）：</strong>¥20,000-30,000/晚 | 川湯温泉旅館</li>
+          <li><strong>阿寒湖（1晚）：</strong>¥35,000-60,000/晚 | 含晚餐溫泉旅館</li>
+          <li><strong>網走（1晚）：</strong>¥20,000-30,000/晚 | 東橫Inn 2間房</li>
+          <li><strong>知床（2晚）：</strong>¥40,000-70,000/晚 | 知床グランドホテル</li>
+          <li><strong>旭川（1晚）：</strong>¥20,000-30,000/晚 | JR Inn 或 APA</li>
+          <li><strong>富良野（1晚）：</strong>¥25,000-40,000/晚 | Prince Hotel</li>
+          <li style="color:#9b6dbf;font-weight:700;">⚠️ 必確認：電梯、無障礙客房、無障礙廁所</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>💰 每日預算（6人合計）</h3>
+        <ul>
+          <li><strong>住宿（2間房）：</strong>¥20,000-70,000/晚</li>
+          <li><strong>餐飲（6人）：</strong>¥8,000-15,000/天</li>
+          <li><strong>景點門票：</strong>¥3,000-8,000/天</li>
+          <li><strong>油費（HiAce）：</strong>約¥5,000-7,000/天</li>
+          <li><strong>高速通行費：</strong>¥2,000-5,000/天</li>
+          <li><strong>停車費：</strong>大多免費 or ¥500/次</li>
+          <li><strong>長者醫療備用：</strong>¥3,000-5,000（備用緊急費）</li>
+          <li><strong>日均合計：</strong>約¥41,000-110,000/天</li>
+          <li><strong>11天總預算：</strong><span style="color:var(--coral-orange);font-weight:700;">¥600,000-900,000</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Senior Travel Section -->
+    <p class="section-title" style="margin-bottom:16px;">👴👵 <span>長者友善</span> 旅遊全攻略</p>
+    <p class="section-subtitle">針對75歲以上父母的專項準備清單</p>
+    <div class="tips-grid" style="margin-bottom:40px;">
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">💊</div>
+        <div>
+          <h4>藥物與醫療準備</h4>
+          <p>出發前準備充足常用藥（心臟藥、高血壓藥、止痛藥等），按天分裝在標示清晰的小藥盒。帶備日文版醫療情況卡（含血型、過敏、長期病藥物名稱的日文），並記錄沿途主要城市醫院地址：帶廣 北斗病院、釧路 市立病院、旭川 医科大学病院。</p>
+        </div>
+      </div>
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">🏨</div>
+        <div>
+          <h4>住宿預訂長者需求</h4>
+          <p>預訂酒店時必須確認：①有電梯（エレベーター）②有無障礙客房（バリアフリールーム）③衛生間有扶手（手すり）④溫泉旅館浴室有防滑墊。可直接電話詢問或在 Booking.com 篩選「無障礙設施」。強烈建議長者父母入住一樓或低層客房。</p>
+        </div>
+      </div>
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">🩼</div>
+        <div>
+          <h4>行動輔助設備</h4>
+          <p>若父母行走較慢，建議攜帶折疊式手杖（杖），或到當地藥局（ドラッグストア）購買。旭山動物園、部分景點可免費借用輪椅（要押金）。出發前向旅館確認是否可預借輪椅。Farm Tomita、Farm Tomita 商店有可供休息的椅子和涼棚。</p>
+        </div>
+      </div>
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">🌡</div>
+        <div>
+          <h4>7月氣候與長者健康</h4>
+          <p>北海道7月日間 20-28°C，但早晚溫差大（可至12-15°C），長者容易著涼。帶備輕薄防風外套（特別是道東釧路、知床海邊）。午間紫外線強，帶備防曬和帽子。長者在溫泉旅館浸泡時間不宜超過 15 分鐘，小心起立時暈眩，浸泡後多補水。</p>
+        </div>
+      </div>
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">⏰</div>
+        <div>
+          <h4>行程節奏調整建議</h4>
+          <p>每天景點數量控制在 2-3 個為宜，留充足午休時間（至少1小時）。長途駕駛每1.5小時必停車讓長者伸展。避免連續3天以上密集行程，在帶廣和知床各預留半天的「休閒日」讓長者在溫泉旅館休息。晚餐盡量 18:00-19:00 前結束，不要拖到太晚。</p>
+        </div>
+      </div>
+      <div class="tip-item" style="border-left:3px solid #9b6dbf;">
+        <div class="t-icon">🆘</div>
+        <div>
+          <h4>緊急應變資訊</h4>
+          <p>日本緊急電話：<strong>救護車 119 / 警察 110</strong>。各地醫院導航關鍵字：「病院」。建議在手機儲存各天住宿附近醫院地址。購買旅遊保險時確認含「緊急醫療搬送」（長者尤其重要）。日本藥局（ドラッグストア：マツモトキヨシ、ツルハドラッグ）各城市均有，可購買基本藥物。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity Accessibility Summary -->
+    <p class="section-title" style="margin-bottom:16px;">♿ <span>景點無障礙</span> 難易度評估</p>
+    <p class="section-subtitle">根據長者75歲以上行動能力評估各景點適合程度</p>
+    <div style="overflow-x:auto;margin-bottom:40px;">
+      <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px var(--shadow);font-size:0.88rem;">
+        <thead>
+          <tr style="background:var(--sky-blue);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;">
+            <th style="padding:12px 16px;text-align:left;">景點</th>
+            <th style="padding:12px 16px;text-align:center;">長者適合度</th>
+            <th style="padding:12px 16px;text-align:left;">步行量</th>
+            <th style="padding:12px 16px;text-align:left;">長者建議方案</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">硫磺山</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--forest-green);font-weight:700;">✅ 非常適合</td>
+            <td style="padding:11px 16px;">地面平坦，5-10分鐘</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">直接參觀，無需特別調整</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,0.02);border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">摩周湖展望台</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--forest-green);font-weight:700;">✅ 非常適合</td>
+            <td style="padding:11px 16px;">停車場到展望台 3分鐘</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">直接前往，輕鬆觀景</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">屈斜路湖砂湯</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--forest-green);font-weight:700;">✅ 非常適合</td>
+            <td style="padding:11px 16px;">沙灘平坦，自選步行量</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">坐在沙灘椅享受即可</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,0.02);border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">阿寒湖民俗村</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--sky-blue);font-weight:700;">🔵 較適合</td>
+            <td style="padding:11px 16px;">30-45分鐘步行</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">慢步遊覽，坐下欣賞表演</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">網走監獄博物館</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--sky-blue);font-weight:700;">🔵 較適合</td>
+            <td style="padding:11px 16px;">1-1.5小時步行</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">遊覽重點展館，跳過偏遠展區</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,0.02);border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">知床五湖（地上步道）</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--coral-orange);font-weight:700;">⚠️ 需調整</td>
+            <td style="padding:11px 16px;">全程3km，2-3小時</td>
+            <td style="padding:11px 16px;font-size:0.82rem;"><strong>改走高架木道（800m，40分鐘）</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">知床觀光船</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--sky-blue);font-weight:700;">🔵 較適合</td>
+            <td style="padding:11px 16px;">坐船，無需步行</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">選大型觀光船（有室內座位）</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,0.02);border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">旭山動物園</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--sky-blue);font-weight:700;">🔵 較適合</td>
+            <td style="padding:11px 16px;">1-2小時（可借輪椅）</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">借免費輪椅，遊覽精華館</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-sand);">
+            <td style="padding:11px 16px;font-weight:600;">青い池（美瑛）</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--forest-green);font-weight:700;">✅ 非常適合</td>
+            <td style="padding:11px 16px;">停車場到池邊 200m</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">直接前往，地面平整</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,0.02);">
+            <td style="padding:11px 16px;font-weight:600;">Farm Tomita（薰衣草）</td>
+            <td style="padding:11px 16px;text-align:center;color:var(--forest-green);font-weight:700;">✅ 非常適合</td>
+            <td style="padding:11px 16px;">緩坡，自選步行量</td>
+            <td style="padding:11px 16px;font-size:0.82rem;">坐在花田長椅慢慢欣賞</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-title" style="margin-bottom:16px;">💡 <span>自駕重要提示</span>（影片整理）</p>
+    <div class="tips-grid">
+      <div class="tip-item">
+        <div class="t-icon">🛡</div>
+        <div>
+          <h4>全保保險必須買！</h4>
+          <p>YouTube 影片「99%旅客必定犯的錯誤」特別提醒：北海道自駕一定要買 CDW+NOC 組合全險，「全保」≠ 免費，需額外購買 NOC（非運行補償）才是真正全保。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">🦌</div>
+        <div>
+          <h4>野生動物突然出沒</h4>
+          <p>北海道道路兩側常有鹿、狐狸突然衝出，夜間尤其危險。建議天黑前完成長途駕駛，不要超速，保持安全距離。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">⛽</div>
+        <div>
+          <h4>偏遠地區加油提前</h4>
+          <p>道東許多地方加油站稀少（如知床半島）。建議油錶跌到一半就找油站加油，不要等到快沒油才急找。還車前記得加滿油。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">📶</div>
+        <div>
+          <h4>通訊 / 網絡</h4>
+          <p>購買日本 SIM 卡（IIJmio / AHAMo，約¥3,000/10天）或 eSIM。偏遠地區網絡信號較弱，建議預先下載 Google Maps 離線地圖。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">🚗</div>
+        <div>
+          <h4>導航使用 Google Maps</h4>
+          <p>在日本 Google Maps 非常可靠。目的地輸入日文名稱或郵便番號（如 086-1800 弟子屈）最準確。注意：車內導航機有時不更新，建議手機同步確認。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">🐻</div>
+        <div>
+          <h4>知床熊出沒注意</h4>
+          <p>知床五湖等地棕熊出沒頻繁，入口需觀看安全說明影片。可在現場租借防熊噴霧（¥500/次）。嚴格遵守指定路線，小孩全程緊跟大人，切勿單獨行動。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">🌡</div>
+        <div>
+          <h4>7月北海道氣溫提示</h4>
+          <p>道東（釧路、網走）7月平均氣溫 15-20°C，非常涼爽，帶輕薄外套。道北（旭川、富良野）約 22-28°C。知床半島海邊有風，需防風外套。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="t-icon">🅿</div>
+        <div>
+          <h4>停車場資訊</h4>
+          <p>大部分景點（知床五湖、摩周湖、硫磺山）停車收費¥500。Farm Tomita、四季彩の丘 停車¥500。市區酒店大多有免費停車場（部分需預約）。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <p class="section-title" style="margin-bottom:8px;">🗺 行程路線圖</p>
+      <p style="font-size:0.9rem;color:#6a7a8e;margin-bottom:16px;">新千歲機場 → 道東 → 道北 → 新千歲機場（大環形路線）</p>
+      <div class="route-list">
+        <div class="route-stop">✈ 新千歲</div>
+        <div class="route-stop">🥩 帶廣</div>
+        <div class="route-stop">🦢 釧路</div>
+        <div class="route-stop">🌋 弟子屈</div>
+        <div class="route-stop">🪶 阿寒湖</div>
+        <div class="route-stop">🚔 網走</div>
+        <div class="route-stop">🦅 知床</div>
+        <div class="route-stop">🎡 旭川</div>
+        <div class="route-stop">💙 美瑛</div>
+        <div class="route-stop">💜 富良野</div>
+        <div class="route-stop">✈ 新千歲</div>
+      </div>
+      <div class="map-placeholder">
+        <div style="font-size:3rem;margin-bottom:12px;">🗾</div>
+        <p style="font-size:1rem;font-family:'Nunito',sans-serif;font-weight:700;color:#4a9ebf;">北海道 道東・道北 自駕路線</p>
+        <p style="font-size:0.85rem;color:#7a8899;margin-top:8px;">總行程約 1,800km | 11天 | 道東 7天 + 道北 2天 + 往返 2天</p>
+        <a href="https://www.google.com/maps/d/u/0/?hl=zh-TW" target="_blank" class="map-link-btn">🗺 在 Google Maps 規劃路線</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="background:var(--deep-navy);color:#8a9ab2;text-align:center;padding:24px 20px;margin-top:60px;font-size:0.82rem;">
+  <p style="font-family:'Nunito',sans-serif;font-weight:700;color:#fff;font-size:1rem;margin-bottom:8px;">🗾 北海道 道東・道北 六人大家庭自駕遊 2026</p>
+  <p>本人・姊妹・妻子・成年女兒・父親（75歲+）・母親（75歲+）｜7月20日（一）– 30日（四）｜11天10夜</p>
+  <p style="margin-top:6px;">行程根據 YouTube 旅遊影片深度分析製作 ｜ 播放清單：G先生的日本旅居生活・老宋CHANNEL・Kaki's Sekai・JOY TV・小修生活蔬食 等</p>
+</div>
+
+<script>
+// Tab switching
+function switchTab(tabName, btn) {
+  document.querySelectorAll('.tab-content').forEach(c => {
+    c.style.display = 'none';
+    c.classList.remove('active');
+  });
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  const target = document.getElementById('tab-' + tabName);
+  if (target) { target.style.display = 'block'; target.classList.add('active'); }
+  btn.classList.add('active');
+}
+
+// Timeline toggle
+function toggleDay(dayId) {
+  const el = document.getElementById(dayId);
+  el.classList.toggle('collapsed');
+  const header = el.previousElementSibling;
+  const arrow = header.querySelector('.arrow');
+  if (arrow) arrow.textContent = el.classList.contains('collapsed') ? '▼' : '▲';
+}
+
+// Card detail toggle
+function toggleDetail(btn) {
+  const detail = btn.nextElementSibling;
+  const isOpen = detail.style.maxHeight && detail.style.maxHeight !== '0px';
+  if (isOpen) {
+    detail.style.maxHeight = null;
+    detail.style.opacity = '0';
+    btn.innerHTML = '▼ 展開詳情';
+  } else {
+    detail.style.maxHeight = detail.scrollHeight + 'px';
+    detail.style.opacity = '1';
+    btn.innerHTML = '▲ 收合';
+  }
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  // Show first tab
+  const firstBtn = document.querySelector('.tab-btn');
+  const firstTab = document.querySelector('.tab-content');
+  if (firstBtn && firstTab) {
+    firstBtn.classList.add('active');
+    firstTab.style.display = 'block';
+    firstTab.classList.add('active');
+  }
+  // All timeline bodies collapsed except day1
+  document.querySelectorAll('.timeline-body').forEach((body, index) => {
+    if (index > 0) body.classList.add('collapsed');
+  });
+});
+</script>
+
+</body>
+</html>
