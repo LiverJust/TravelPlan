@@ -72,6 +72,8 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 .route-badge{display:inline-block;background:#fff3e0;color:#e65100;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:12px;margin-top:8px;}
 .outlet-highlight{background:linear-gradient(135deg,#fdf5ff,#f0e8ff);border-left:4px solid #8b5cf6;border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#5b21b6;}
 .sake-highlight{background:linear-gradient(135deg,#fff8f0,#fff0e8);border-left:4px solid var(--coral-orange);border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#7c3a00;}
+.furano-highlight{background:linear-gradient(135deg,#f5f0ff,#fff0fa);border-left:4px solid #c084fc;border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#6b21a8;}
+.car-highlight{background:linear-gradient(135deg,#f0f9ff,#e8f4fd);border-left:4px solid var(--sky-blue);border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#1e3a5f;}
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 @media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.cards-grid{grid-template-columns:1fr;}}
@@ -112,6 +114,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 .route-stop{background:var(--sky-blue);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.85rem;padding:8px 16px;border-radius:20px;white-space:nowrap;}
 .route-stop.new-stop{background:var(--forest-green);}
 .route-stop.shop{background:#8b5cf6;}
+.route-stop.furano-extra{background:#c084fc;}
 .route-arrow{color:var(--coral-orange);font-weight:900;font-size:1.1rem;}
 .access-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.85rem;}
 .access-table th{background:var(--sky-blue);color:#fff;padding:10px 14px;text-align:left;font-family:'Nunito',sans-serif;font-weight:700;}
@@ -127,7 +130,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 
 <div class="hero">
   <span class="emoji-deco">🚗🌸🦅</span>
-  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v3 修訂版 ✦</div>
+  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v4 修訂版 ✦</div>
   <h1>北海道 道東・道北<br>六人大家庭自駕遊</h1>
   <p class="hero-sub">2026年 7月20日（一）→ 7月31日（五）｜12天11夜・本人・姊妹・妻子・成年女兒・父母（75歲以上）</p>
   <div class="hero-stats">
@@ -151,7 +154,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content active" id="tab-itinerary">
   <div class="container">
     <p class="section-title">🗓 逐日行程 <span>（點擊每天展開詳情）</span></p>
-    <p class="section-subtitle">新千歲出發 → 帶廣 → 弟子屈 → 阿寒湖 → 知床 → 網走 → 層雲峡 → 旭川 → 美瑛富良野 → Outlet → 新千歲</p>
+    <p class="section-subtitle">新千歲出發 → 帶廣 → 弟子屈（道東三湖 + 阿寒湖一日遊）→ 知床 → 網走 → 層雲峡 → 旭川 → 美瑛富良野（2晚）→ Outlet → 新千歲</p>
 
     <div class="overview-grid">
       <div class="overview-panel">
@@ -160,7 +163,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
       </div>
       <div class="overview-panel">
         <h3>🌸 道北（Dōhoku）</h3>
-        <p>北海道北部花田王國——層雲峡壯觀峽谷、旭山動物園、美瑛青池、富良野薰衣草花海，加上三井Outlet大型購物圓滿收尾！</p>
+        <p>北海道北部花田王國——層雲峡壯觀峽谷、旭山動物園、美瑛青池、富良野薰衣草花海（特別增加2晚深度遊！），加上三井Outlet大型購物圓滿收尾！</p>
       </div>
     </div>
 
@@ -177,8 +180,8 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
       </div>
     </div>
 
-    <p style="font-size:.88rem;color:#6a7a8e;background:#f0f8ff;padding:14px 18px;border-radius:10px;margin-bottom:32px;border-left:4px solid var(--sky-blue);">
-      <strong>v3 修訂重點：</strong>① 取消釧路、帶廣改住1晚 ② Day 2 指定行程：幸福車站→豚丼一番→上川大雪酒造碧雲蔵→弟子屈拉麵→屈斜路王子大飯店 ③ 知床↔網走對調（先知床後網走，返程路線更順暢，節省~130km）④ 總行程12天11夜，7月20–31日
+    <p style="font-size:.88rem;color:#6a7a8e;background:#fff8f0;padding:14px 18px;border-radius:10px;margin-bottom:32px;border-left:4px solid var(--coral-orange);">
+      <strong>v4 修訂重點：</strong>① Day 3 大合拼——舊 Day 3 + Day 4 行程合為一天（硫黃山→摩周湖→屈斜路湖砂湯→北海道夢幻橋→阿寒湖→愛努族民俗村），當晚返回弟子屈住宿，取消阿寒湖過夜 ② Day 4 由弟子屈直接前往知床（世界遺產入境）③ 富良野增加1晚，深度遊薰衣草花海區 ④ 租車改用 Toyota Alphard V4（車主確認可放 28寸×4 + 25寸×1）
     </p>
 
     <div class="timeline">
@@ -198,16 +201,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <div class="timeline-body collapsed" id="day1">
           <ul class="activity-list">
             <li><span class="activity-icon">✈</span><span>抵達新千歲機場（CTS），辦理入境手續、提取行李</span></li>
-            <li><span class="activity-icon">🚗</span><span><strong>租車（重要！）</strong>：六人行程建議租 <strong>Toyota HiAce 9人座廂型車</strong>（最舒適）或分租兩輛 SUV。推薦 Toyota Rent a Car 或 Nippon Rent-A-Car，機場直接取車，提前2個月預訂</span></li>
+            <li><span class="activity-icon">🚗</span><span><strong>租車（v4 指定車型！）</strong>：租用 <strong>Toyota Alphard V4</strong>——豪華七人座 MPV，6人行程舒適之選！車主確認可放行李：<strong>28寸行李箱 × 4 個 + 25寸行李箱 × 1 個</strong>。租車公司：<a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com</a>（已聯絡確認），提前預訂並確認取車手續</span></li>
             <li><span class="activity-icon">🛣</span><span>行駛道東自動車道前往 <strong>帶廣（Obihiro）</strong>，全程約 240km，預計 2.5 小時。高速途中建議在「夕張SA」或「占冠PA」停車休息（長者友善）</span></li>
             <li><span class="activity-icon">🍛</span><span>晚餐：帶廣「<strong>インデアンカレー</strong>」——在地人從小吃到大的咖喱連鎖，物美價廉，適合抵達後輕鬆用餐</span></li>
           </ul>
+          <div class="car-highlight">🚗 <strong>Toyota Alphard V4 行李資訊：</strong>店主確認可安放 28寸行李箱×4 + 25寸行李箱×1，6人家庭行程完全夠用！如需更多行李空間，可將部分行李置於座椅旁。租車詳情：<a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com/cn/qa</a></div>
           <div class="tip-box">💡 Day 2 午餐安排帶廣豚丼一番，所以 Day 1 晚餐改吃インデアンカレー，避免重複，兩種帶廣名物都嘗到！</div>
           <div class="stay-info">🏨 今晚住宿：帶廣市區（推薦 <strong>裡滿士飯店 Rimse Obihiro</strong> 或 <strong>帶廣廣場酒店</strong>，需確認有電梯）</div>
         </div>
       </div>
 
-      <!-- DAY 2 (REWRITTEN) -->
+      <!-- DAY 2 -->
       <div class="timeline-item">
         <div class="day-dot"></div>
         <div class="timeline-header" onclick="toggleDay('day2')">
@@ -234,14 +238,14 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 3 -->
+      <!-- DAY 3 — MEGA MERGED DAY (old Day 3 + old Day 4) -->
       <div class="timeline-item">
         <div class="day-dot"></div>
         <div class="timeline-header" onclick="toggleDay('day3')">
           <div class="day-num">Day 3<br><small>7/22</small></div>
           <div class="day-info">
-            <div class="day-title">💙 道東三湖｜摩周湖・屈斜路湖・硫黃山</div>
-            <div class="day-subtitle">弟子屈 → 硫黃山 → 摩周湖第一・第三展望台 → 屈斜路湖砂湯</div>
+            <div class="day-title">🌟 道東精華大日！硫黃山・摩周湖・阿寒湖・愛努族</div>
+            <div class="day-subtitle">弟子屈 → 硫黃山 → 摩周湖 → 屈斜路湖砂湯 → 北海道夢幻橋 → 阿寒湖 → 愛努族民俗村 → 返回弟子屈</div>
           </div>
           <span class="day-region region-east">道東</span>
           <span class="arrow">▼</span>
@@ -251,55 +255,33 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
             <li><span class="activity-icon">🌋</span><span><strong>硫黃山（Iozan）</strong>：仍在活動的活火山！硫磺煙霧不斷噴出，地面滾燙，近距離感受大地的力量。旁邊商家用地熱烤玉米和雞蛋——必吃！免費入場，停車¥500</span></li>
             <li><span class="activity-icon">💙</span><span><strong>摩周湖第一展望台</strong>：世界透明度最高的湖泊之一，湖水深藍神秘，清早有可能見到「霧の摩周湖」，收費停車場¥500</span></li>
             <li><span class="activity-icon">🔭</span><span><strong>摩周湖第三展望台（推薦！）</strong>：比第一展望台更震撼的全景視野，可同時看見摩周湖全貌及知床連峰，<strong>免費停車</strong>，人更少！</span></li>
-            <li><span class="activity-icon">🏖</span><span><strong>屈斜路湖 砂湯</strong>：湖邊沙灘下湧出天然溫泉，用手挖開沙子即可免費泡腳/全身！傍晚夕陽映照屈斜路湖，景色絕美。酒店就在附近，步行可達！</span></li>
-            <li><span class="activity-icon">🦢</span><span>屈斜路湖邊有天鵝和野鴨棲息，黃昏漫步湖邊欣賞自然風光，心曠神怡</span></li>
+            <li><span class="activity-icon">🏖</span><span><strong>屈斜路湖 砂湯</strong>：湖邊沙灘下湧出天然溫泉，用手挖開沙子即可免費泡腳！傍晚夕陽映照屈斜路湖，景色絕美。酒店就在附近</span></li>
+            <li><span class="activity-icon">🌉</span><span><strong>北海道夢幻橋（途中必停！）</strong>：弟子屈往阿寒湖路上的秘境，木橋橫跨碧綠溪流，被茂密原始森林包圍，是北海道隱藏版絕景，停留約20分鐘</span></li>
+            <li><span class="activity-icon">🪶</span><span><strong>阿寒湖愛努族民俗村（アイヌコタン）</strong>：日本最大愛努族聚落，有傳統舞蹈表演「イコロ」（每晚定時演出，入場費¥1,080）、手工藝品店、傳統食品，深度了解北海道原住民文化</span></li>
+            <li><span class="activity-icon">⛵</span><span><strong>阿寒湖遊覧船</strong>：乘坐觀光船環遊阿寒湖，途中參觀「まりも（毬藻）」展示——世界稀有的球狀藻類，是阿寒湖的象徵（視時間決定是否參加）</span></li>
+            <li><span class="activity-icon">🚗</span><span>晚上從阿寒湖返回弟子屈（約50km，約45分鐘），回到酒店享受屈斜路湖露天溫泉</span></li>
           </ul>
-          <div class="tip-box">💡 今晚繼續住屈斜路王子大飯店！建議黃昏前回到酒店享受湖邊露天溫泉，是弟子屈最不可錯過的體驗。</div>
-          <div class="senior-alert">♿ <strong>長者友善：</strong>硫黃山停車場到火山口步行僅5分鐘，平坦。摩周湖第三展望台停車場直達，完全適合長者。砂湯沙灘柔軟，長者坐椅子泡腳即可。</div>
-          <div class="stay-info">🏨 今晚住宿：屈斜路プリンスホテル（連住2晚）</div>
+          <div class="tip-box">💡 <strong>行程安排建議：</strong>早上8:00出發，先走硫黃山→摩周湖（上午）→砂湯（中午）→夢幻橋（下午）→阿寒湖愛努族民俗村（傍晚-晚上）→返回弟子屈。充實但精彩的一天！愛努族舞蹈通常19:00或20:00演出，看完即可返程。</div>
+          <div class="senior-alert">♿ <strong>長者友善：</strong>硫黃山停車場到火山口步行僅5分鐘，平坦。摩周湖第三展望台停車場直達，完全適合長者。砂湯沙灘柔軟，長者坐椅子泡腳即可。阿寒湖民俗村地面平坦，愛努族舞蹈在室內劇場有座椅。</div>
+          <div class="stay-info">🏨 今晚住宿：<strong>屈斜路プリンスホテル（連住第2晚）</strong>——日間精華遊覽阿寒湖後返回弟子屈過夜，免去搬行李之苦！</div>
         </div>
       </div>
 
-      <!-- DAY 4 -->
+      <!-- DAY 4 — 弟子屈→知床（was Day 5 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
         <div class="timeline-header" onclick="toggleDay('day4')">
           <div class="day-num">Day 4<br><small>7/23</small></div>
           <div class="day-info">
-            <div class="day-title">🦋 弟子屈 → 阿寒湖｜愛努族・毬藻</div>
-            <div class="day-subtitle">弟子屈 → 北海道夢幻橋 → 阿寒湖（阿寒摩周國立公園）</div>
+            <div class="day-title">🦅 弟子屈 → 知床｜世界遺產入境</div>
+            <div class="day-subtitle">弟子屈/屈斜路 → 中標津 → 斜里 → 知床宇登呂（約120km / 約2小時）</div>
           </div>
           <span class="day-region region-east">道東</span>
           <span class="arrow">▼</span>
         </div>
         <div class="timeline-body collapsed" id="day4">
           <ul class="activity-list">
-            <li><span class="activity-icon">🌉</span><span><strong>北海道夢幻橋（途中必停！）</strong>：弟子屈往阿寒湖路上的秘境，木橋橫跨碧綠溪流，被茂密原始森林包圍，是北海道隱藏版絕景，停留約20分鐘</span></li>
-            <li><span class="activity-icon">🪶</span><span><strong>阿寒湖愛努族民俗村（アイヌコタン）</strong>：日本最大愛努族聚落，有傳統舞蹈表演「イコロ」（每晚定時演出，入場費¥1,080）、手工藝品店、傳統食品，深度了解北海道原住民文化</span></li>
-            <li><span class="activity-icon">⛵</span><span><strong>阿寒湖遊覧船</strong>：乘坐觀光船環遊阿寒湖，途中參觀「まりも（毬藻）」展示——世界稀有的球狀藻類，是阿寒湖的象徵</span></li>
-            <li><span class="activity-icon">♨</span><span>阿寒湖溫泉街晚上可逛，有各種伴手禮店。泡一泡阿寒湖溫泉，消除旅途疲勞</span></li>
-          </ul>
-          <div class="tip-box">💡 阿寒湖愛努族舞蹈表演每晚固定時間演出，建議查詢當晚場次（通常19:00、20:00各一場），提前購票。</div>
-          <div class="senior-alert">♿ <strong>長者友善：</strong>阿寒湖民俗村地面平坦，長者可坐輪椅遊覽。愛努族舞蹈在室內劇場，有座椅，非常適合長者。遊覧船有室內座位，長者乘坐舒適。</div>
-          <div class="stay-info">🏨 今晚住宿：阿寒湖温泉（推薦 <strong>阿寒湖荘</strong> 或 <strong>NEW 阿寒ホテル</strong>，湖景房 + 電梯必選）</div>
-        </div>
-      </div>
-
-      <!-- DAY 5 — 阿寒湖→知床（SWAPPED） -->
-      <div class="timeline-item">
-        <div class="day-dot"></div>
-        <div class="timeline-header" onclick="toggleDay('day5')">
-          <div class="day-num">Day 5<br><small>7/24</small></div>
-          <div class="day-info">
-            <div class="day-title">🦅 阿寒湖 → 知床｜世界遺產入境</div>
-            <div class="day-subtitle">阿寒湖 → 中標津 → 斜里 → 知床宇登呂（約160km / 約2.5小時）</div>
-          </div>
-          <span class="day-region region-east">道東</span>
-          <span class="arrow">▼</span>
-        </div>
-        <div class="timeline-body collapsed" id="day5">
-          <ul class="activity-list">
-            <li><span class="activity-icon">🛣</span><span>早上退房，沿阿寒横断道路東行 → 弟子屈方向 → 中標津 → 国道244 → 斜里 → 知床宇登呂。全程約 160km，約 2.5 小時，建議在中標津道之駅停車休息</span></li>
+            <li><span class="activity-icon">🛣</span><span>早上退房，從弟子屈出發，沿国道 243 → 中標津 → 国道 244 → 斜里 → 知床宇登呂。全程約 120km，約 2 小時，建議在中標津道之駅停車休息</span></li>
             <li><span class="activity-icon">🌲</span><span><strong>知床五湖（Shiretoko Goko）</strong>：UNESCO 世界自然遺產！5個湛藍湖泊隱藏於原始森林，7月開放「地上步道自由散步」，沿木棧道漫步，極有可能近距離見到棕熊！</span></li>
             <li><span class="activity-icon">⛵</span><span><strong>知床観光船（ゴジラ岩観光）</strong>：乘船沿知床半島海岸航行，欣賞奇岩峭壁、瀑布直入大海、野生棕熊在岸邊覓食——整個行程最難忘的體驗！提前網上預訂</span></li>
             <li><span class="activity-icon">🌅</span><span><strong>知床峠（初見）</strong>：如時間允許，傍晚可駕車上知床峠欣賞日落，晴天可望見俄羅斯領土國後島</span></li>
@@ -311,11 +293,11 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 6 — 知床深度遊 -->
+      <!-- DAY 5 — 知床深度遊（was Day 6 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
-        <div class="timeline-header" onclick="toggleDay('day6')">
-          <div class="day-num">Day 6<br><small>7/25</small></div>
+        <div class="timeline-header" onclick="toggleDay('day5')">
+          <div class="day-num">Day 5<br><small>7/24</small></div>
           <div class="day-info">
             <div class="day-title">⭐ 知床深度遊｜羅臼・觀鯨・觀星</div>
             <div class="day-subtitle">宇登呂 → 知床峠 → 羅臼 → 觀鯨船 → 深夜觀星</div>
@@ -323,7 +305,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <span class="day-region region-east">道東</span>
           <span class="arrow">▼</span>
         </div>
-        <div class="timeline-body collapsed" id="day6">
+        <div class="timeline-body collapsed" id="day5">
           <ul class="activity-list">
             <li><span class="activity-icon">🛣</span><span><strong>知床峠ドライブ</strong>：清早翻越知床峠（738m），晴天可望見俄羅斯領土國後島，是北海道最美的高山駕駛路段</span></li>
             <li><span class="activity-icon">🐳</span><span><strong>羅臼 觀鯨船</strong>：知床半島東側小鎮羅臼，夏季有深海觀鯨船出發，可能看到抹香鯨！推薦大型船（室內座位 + 廁所，適合長者），建議早上出發</span></li>
@@ -336,11 +318,11 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 7 — 知床→網走（SWAPPED，只需70km！） -->
+      <!-- DAY 6 — 知床→網走（was Day 7 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
-        <div class="timeline-header" onclick="toggleDay('day7')">
-          <div class="day-num">Day 7<br><small>7/26</small></div>
+        <div class="timeline-header" onclick="toggleDay('day6')">
+          <div class="day-num">Day 6<br><small>7/25</small></div>
           <div class="day-info">
             <div class="day-title">🚔 知床 → 網走｜監獄・流氷館・鄂霍次克</div>
             <div class="day-subtitle">知床宇登呂 → 網走（約70km / 約1小時）→ 輕鬆的移動日！</div>
@@ -348,7 +330,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <span class="day-region region-east">道東</span>
           <span class="arrow">▼</span>
         </div>
-        <div class="timeline-body collapsed" id="day7">
+        <div class="timeline-body collapsed" id="day6">
           <ul class="activity-list">
             <li><span class="activity-icon">🛣</span><span>早上悠閒退房，沿国道 334 → 斜里 → 国道 244 前往網走，全程僅約 <strong>70km，約1小時</strong>——是全程最輕鬆的移動！充裕時間遊覽網走</span></li>
             <li><span class="activity-icon">⛓</span><span><strong>網走監獄博物館（博物館網走監獄）</strong>：日本最有名的舊監獄開放參觀！明治時代木造監舍群完整保留，蠟像人偶重現囚犯生活，大人小孩都大開眼界。需2-3小時</span></li>
@@ -356,18 +338,18 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
             <li><span class="activity-icon">🏔</span><span><strong>天都山展望台</strong>：俯瞰鄂霍次克海、網走湖、能取湖的360度全景，天氣好時視野極佳</span></li>
             <li><span class="activity-icon">🦀</span><span>晚餐：網走港海鮮——毛蟹、鮭魚、海膽，7月正是新鮮海膽的旺季！</span></li>
           </ul>
-          <div class="route-badge">✅ 路線優化：知床→網走僅70km（1小時），比舊路線（網走→知床→層雲峡=270km）節省約200km車程！</div>
+          <div class="route-badge">✅ 路線優化：知床→網走僅70km（1小時），比舊路線節省約200km車程！</div>
           <div class="tip-box">💡 7月網走平均氣溫僅18°C，非常舒適！進入流氷館時提供租借外套，長者進去前先穿好防寒衣物。</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>流氷館有升降機，長者方便參觀。監獄博物館建議乘坐館內電動車（有收費接駁服務），節省長者體力。</div>
           <div class="stay-info">🏨 今晚住宿：網走市（推薦 <strong>東橫Inn 網走站前</strong> 或 <strong>ホテルルートイン網走</strong>）</div>
         </div>
       </div>
 
-      <!-- DAY 8 — 網走→層雲峡 -->
+      <!-- DAY 7 — 網走→層雲峡（was Day 8 in v3） -->
       <div class="timeline-item">
         <div class="day-dot" style="background:var(--forest-green);box-shadow:0 0 0 3px var(--forest-green);"></div>
-        <div class="timeline-header" onclick="toggleDay('day8')" style="border-left-color:var(--forest-green);">
-          <div class="day-num" style="color:var(--forest-green);">Day 8<br><small>7/27</small></div>
+        <div class="timeline-header" onclick="toggleDay('day7')" style="border-left-color:var(--forest-green);">
+          <div class="day-num" style="color:var(--forest-green);">Day 7<br><small>7/26</small></div>
           <div class="day-info">
             <div class="day-title">🏔 網走 → 層雲峡｜大峽谷・銀瀑・溫泉</div>
             <div class="day-subtitle">網走 → 北見 → 遠軽 → 層雲峡（約140km / 約2小時）</div>
@@ -375,7 +357,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <span class="day-region region-north">大雪山</span>
           <span class="arrow">▼</span>
         </div>
-        <div class="timeline-body collapsed" id="day8" style="border-left-color:var(--forest-green);">
+        <div class="timeline-body collapsed" id="day7" style="border-left-color:var(--forest-green);">
           <ul class="activity-list">
             <li><span class="activity-icon">🛣</span><span>早上退房，沿国道 39 號西行：網走 → 北見（~44km）→ 遠軽（~50km）→ 上川 → 層雲峡（~46km），全程約140km，約2小時。途中可在北見道之駅補充食物</span></li>
             <li><span class="activity-icon">🌊</span><span><strong>大函・小函（Obako / Kobako）</strong>：層雲峡最壯觀的柱狀節理峽谷！數十萬年前火山噴發形成的六角形玄武岩柱壁高達100-200m，氣勢磅礴。步道平坦，沿峽谷漫步約30分鐘</span></li>
@@ -389,11 +371,11 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 9 -->
+      <!-- DAY 8 — 層雲峡→旭川（was Day 9 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
-        <div class="timeline-header" onclick="toggleDay('day9')">
-          <div class="day-num">Day 9<br><small>7/28</small></div>
+        <div class="timeline-header" onclick="toggleDay('day8')">
+          <div class="day-num">Day 8<br><small>7/27</small></div>
           <div class="day-info">
             <div class="day-title">🐧 層雲峡 → 旭川｜旭山動物園</div>
             <div class="day-subtitle">層雲峡 → 旭川（約65km / 約1小時）→ 旭山動物園</div>
@@ -401,7 +383,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <span class="day-region region-north">道北</span>
           <span class="arrow">▼</span>
         </div>
-        <div class="timeline-body collapsed" id="day9">
+        <div class="timeline-body collapsed" id="day8">
           <ul class="activity-list">
             <li><span class="activity-icon">🛣</span><span>早上悠閒退房，沿国道 39 號南下前往旭川，全程約65km，只需<strong>1小時</strong>，是全程最輕鬆的移動日之一</span></li>
             <li><span class="activity-icon">🐧</span><span><strong>旭山動物園（Asahiyama Zoo）</strong>：日本最著名的動物園！以「行動展示」方式讓動物展現自然行為——企鵝空中飛翔、北極熊水中游泳、猩猩空中穿梭。可安排整個下午</span></li>
@@ -413,11 +395,11 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 10 -->
+      <!-- DAY 9 — 旭川→美瑛→富良野（was Day 10 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
-        <div class="timeline-header" onclick="toggleDay('day10')">
-          <div class="day-num">Day 10<br><small>7/29</small></div>
+        <div class="timeline-header" onclick="toggleDay('day9')">
+          <div class="day-num">Day 9<br><small>7/28</small></div>
           <div class="day-info">
             <div class="day-title">🌸 美瑛・富良野｜薰衣草花海盛開！</div>
             <div class="day-subtitle">旭川 → 美瑛（青池・花丘・拼布之路）→ 富良野（Farm Tomita）</div>
@@ -425,7 +407,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <span class="day-region region-north">道北</span>
           <span class="arrow">▼</span>
         </div>
-        <div class="timeline-body collapsed" id="day10">
+        <div class="timeline-body collapsed" id="day9">
           <ul class="activity-list">
             <li><span class="activity-icon">💙</span><span><strong>白金 青い池（Blue Pond）</strong>：美瑛最神秘的景點！因火山沉積物呈現神秘蔚藍色，倒映白樺樹群，7月葉綠水藍最美。建議早上7點前到達，幾乎無人，光線最佳</span></li>
             <li><span class="activity-icon">🌈</span><span><strong>四季彩の丘</strong>：14種色彩花田整齊排列在緩坡上，7月薰衣草・波斯菊・百日草同時盛開，是北海道花田的巔峰。有<strong>電動車租借（¥500）</strong>，長者首選！</span></li>
@@ -434,20 +416,48 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
             <li><span class="activity-icon">🍦</span><span><strong>薰衣草霜淇淋</strong>：Farm Tomita 現場限定紫色薰衣草口味，香甜芬芳，必吃！</span></li>
             <li><span class="activity-icon">🧀</span><span><strong>富良野チーズ工房</strong>：本地自製起司工廠，參觀製作過程，購買現做起司和北海道牛乳製品</span></li>
           </ul>
-          <div class="tip-box">💡 7月29日富良野薰衣草正值高峰！Farm Tomita 人多，建議清早開門即前往，下午可能有人龍。</div>
+          <div class="tip-box">💡 7月28日富良野薰衣草正值高峰！Farm Tomita 人多，建議清早開門即前往。今晚在富良野住宿，明天還有整天繼續深度遊！</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>Farm Tomita 花田緩坡草地，長者步行15-30分鐘即可欣賞主要花田，有長椅和遮陽傘。四季彩の丘電動車（¥500）長者坐車遊覽最舒適。青い池停車場至觀景台步行200m，平坦。</div>
-          <div class="stay-info">🏨 今晚住宿：富良野/美瑛（推薦 <strong>富良野プリンスホテル</strong>——無障礙設施完善，有大浴場，長者最舒適）</div>
+          <div class="stay-info">🏨 今晚住宿：富良野（推薦 <strong>富良野プリンスホテル</strong>——無障礙設施完善，有大浴場，長者最舒適）｜ 明天繼續住富良野！</div>
         </div>
       </div>
 
-      <!-- DAY 11 — OUTLET -->
+      <!-- DAY 10 — 富良野自由日（NEW！） -->
+      <div class="timeline-item">
+        <div class="day-dot" style="background:#c084fc;box-shadow:0 0 0 3px #c084fc;"></div>
+        <div class="timeline-header" onclick="toggleDay('day10')" style="border-left-color:#c084fc;">
+          <div class="day-num" style="color:#c084fc;">Day 10<br><small>7/29</small></div>
+          <div class="day-info">
+            <div class="day-title">💜 富良野深度遊｜薰衣草・田園・慢活</div>
+            <div class="day-subtitle">富良野連住第2晚 → 中富良野・上富良野・富良野市周邊慢遊</div>
+          </div>
+          <span class="day-region region-north">道北</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="timeline-body collapsed" id="day10" style="border-left-color:#c084fc;">
+          <ul class="activity-list">
+            <li><span class="activity-icon">💜</span><span><strong>ファーム富田 早晨再訪（ファーム富田）</strong>：若昨天到達時間較晚，今天一早可再探Farm Tomita，晨光下的薰衣草花海別有一番詩意，攝影最佳時段</span></li>
+            <li><span class="activity-icon">🌺</span><span><strong>かんのファーム（Kanno Farm）</strong>：上富良野的另一花田名所！多色花田依山而建，比Farm Tomita人少但景色同樣壯觀，拍照絕佳地點</span></li>
+            <li><span class="activity-icon">🛞</span><span><strong>富良野自行車慢遊</strong>：租單車沿富良野盆地騎行，薰衣草田、麥田、蕎麥花田交替出現，是最接近大自然的方式（平路為主，長者可坐車跟隨）</span></li>
+            <li><span class="activity-icon">🍷</span><span><strong>富良野ワイン（富良野葡萄酒廠）</strong>：北海道著名的葡萄酒產地，富良野葡萄酒工廠提供免費參觀和試飲，購買當地限定葡萄酒和起司套裝作伴手禮</span></li>
+            <li><span class="activity-icon">🧅</span><span><strong>道の駅 なかふらの</strong>：富良野直送農產品，北海道玉米、洋蔥、薰衣草製品一次購齊！也是最物美價廉的當地農產品採買地點</span></li>
+            <li><span class="activity-icon">♨</span><span>傍晚返回富良野プリンスホテル，享受酒店大浴場，為明天的長途購物日養精蓄銳</span></li>
+          </ul>
+          <div class="furano-highlight">💜 <strong>富良野深度遊小貼士：</strong>7月29日薰衣草仍處盛期！中富良野・上富良野一帶共有數十個私人花田，各有特色。建議租借單車悠閒探索，感受北海道最純樸的田園風光。富良野市中心有多家在地餐廳，午餐可嘗試富良野起司牛排定食。</div>
+          <div class="tip-box">💡 今天是全程最輕鬆的一天！不趕行程，慢慢欣賞花田，在農村小店尋寶，感受富良野最真實的悠閒魅力。長者可在酒店休息，精力充沛者外出探索。</div>
+          <div class="senior-alert">♿ <strong>長者友善：</strong>今天行程完全自由，長者可選擇在酒店享受溫泉和設施。如外出，花田停車場直達，無需長途步行。富良野葡萄酒廠室內參觀，舒適無障礙。</div>
+          <div class="stay-info">🏨 今晚住宿：富良野（連住第2晚，富良野プリンスホテル）</div>
+        </div>
+      </div>
+
+      <!-- DAY 11 — OUTLET（was Day 11 in v3） -->
       <div class="timeline-item">
         <div class="day-dot" style="background:#8b5cf6;box-shadow:0 0 0 3px #8b5cf6;"></div>
         <div class="timeline-header" onclick="toggleDay('day11')" style="border-left-color:#8b5cf6;">
           <div class="day-num" style="color:#8b5cf6;">Day 11<br><small>7/30</small></div>
           <div class="day-info">
             <div class="day-title">🛍 購物天｜三井アウトレットパーク 札幌北広島</div>
-            <div class="day-subtitle">富良野/美瑛 → 三井アウトレット 北広島（約100km / 1.5小時）→ 新千歲住宿</div>
+            <div class="day-subtitle">富良野 → 三井アウトレット 北広島（約100km / 1.5小時）→ 新千歲住宿</div>
           </div>
           <span class="day-region region-shopping">購物</span>
           <span class="arrow">▼</span>
@@ -467,7 +477,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
       </div>
 
-      <!-- DAY 12 -->
+      <!-- DAY 12 — Return（was Day 12 in v3） -->
       <div class="timeline-item">
         <div class="day-dot"></div>
         <div class="timeline-header" onclick="toggleDay('day12')">
@@ -499,7 +509,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-attractions">
   <div class="container">
     <p class="section-title">🏛 精選景點 <span>｜道東 & 道北 & 購物</span></p>
-    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v3修訂版）</p>
+    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v4修訂版）</p>
     <div class="cards-grid">
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -527,11 +537,19 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
       </div></div>
 
       <div class="attraction-card"><div class="card-top green"></div><div class="card-body">
+        <span class="card-emoji">🌉</span><div class="card-name">北海道夢幻橋</div><div class="card-location">北海道 弟子屈→阿寒湖 途中</div>
+        <div class="stars">★★★★☆</div><div class="card-tip">💡 弟子屈往阿寒湖途中必停！隱藏秘境</div>
+        <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">秘境</span>
+        <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
+        <div class="detail-content"><p>木橋橫跨碧綠溪流，四周被茂密原始森林包圍，是北海道著名的隱藏版絕景。停留約20分鐘即可，非常值得！在往阿寒湖的路上順道停訪。</p></div>
+      </div></div>
+
+      <div class="attraction-card"><div class="card-top green"></div><div class="card-body">
         <span class="card-emoji">🪶</span><div class="card-name">阿寒湖愛努族民俗村</div><div class="card-location">北海道 釧路市 阿寒湖温泉</div>
         <div class="stars">★★★★☆</div><div class="card-tip">💡 傳統舞蹈每晚演出，可預購座位</div>
         <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">文化</span>
         <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
-        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。阿寒湖遊覧船可觀看毬藻展示。</p></div>
+        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。阿寒湖遊覧船可觀看毬藻展示。v4安排日間一日遊，看完舞蹈後返回弟子屈住宿。</p></div>
       </div></div>
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -592,10 +610,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 
       <div class="attraction-card"><div class="card-top green"></div><div class="card-body">
         <span class="card-emoji">💜</span><div class="card-name">Farm Tomita 薰衣草花田</div><div class="card-location">北海道 空知郡 中富良野町</div>
-        <div class="stars">★★★★★</div><div class="card-tip">💡 7月29日前後正是最盛期！免費入場</div>
+        <div class="stars">★★★★★</div><div class="card-tip">💡 v4增加2晚富良野！7月28-29日正是最盛期</div>
         <span class="card-tag tag-north">道北</span><span class="card-tag tag-must">必去</span>
         <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
-        <div class="detail-content"><p>北海道薰衣草的象徵，7月吸引數十萬遊客。多個主題花圃，免費入場。現場可購買薰衣草霜淇淋（必吃！）、薰衣草精油和系列產品。</p></div>
+        <div class="detail-content"><p>北海道薰衣草的象徵，7月吸引數十萬遊客。多個主題花圃，免費入場。現場可購買薰衣草霜淇淋（必吃！）、薰衣草精油和系列產品。v4在富良野住2晚，可晨昏兩度拜訪！</p></div>
       </div></div>
 
       <div class="attraction-card"><div class="card-top purple"></div><div class="card-body">
@@ -644,12 +662,12 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
       <div class="food-card"><span class="food-emoji">🍦</span><h4>薰衣草霜淇淋</h4>
         <div class="food-location">📍 Farm Tomita, 富良野</div>
         <span class="food-price">¥</span><span class="food-tag">打卡必吃</span>
-        <p style="font-size:.82rem;color:#6a7a8e;margin-top:6px;">Farm Tomita 限定！真正薰衣草製成的紫色霜淇淋，淡淡花香配北海道鮮奶，是富良野最具代表性的打卡甜品。</p>
+        <p style="font-size:.82rem;color:#6a7a8e;margin-top:6px;">Farm Tomita 限定！真正薰衣草製成的紫色霜淇淋，淡淡花香配北海道鮮奶，是富良野最具代表性的打卡甜品。v4住2晚，可吃兩次！</p>
       </div>
       <div class="food-card"><span class="food-emoji">🍜</span><h4>旭川ラーメン</h4>
         <div class="food-location">📍 旭川市（蜂屋 / 青葉）</div>
         <span class="food-price">¥¥</span><span class="food-tag">北海道三大拉麵</span>
-        <p style="font-size:.82rem;color:#6a7a8e;margin-top:6px;">旭川獨創「濃厚醬油・雙湯底」拉麵，蜂屋創業70年，青葉是在地人最愛。Day 9 晚餐推薦。</p>
+        <p style="font-size:.82rem;color:#6a7a8e;margin-top:6px;">旭川獨創「濃厚醬油・雙湯底」拉麵，蜂屋創業70年，青葉是在地人最愛。Day 8 晚餐推薦。</p>
       </div>
       <div class="food-card"><span class="food-emoji">🍛</span><h4>インデアンカレー（帶廣）</h4>
         <div class="food-location">📍 帶廣市（各分店）</div>
@@ -669,33 +687,35 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-info">
   <div class="container">
     <p class="section-title">🚗 交通 &amp; 實用資訊</p>
-    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v3 修訂版）</p>
+    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v4 修訂版）</p>
 
     <div class="route-visual">
-      <h3>🗺 行程路線總覽（v3 最終版）</h3>
+      <h3>🗺 行程路線總覽（v4 最終版）</h3>
       <div class="route-flow">
         <div class="route-stop">✈ 新千歲</div><div class="route-arrow">→</div>
         <div class="route-stop">🍖 帶廣</div><div class="route-arrow">→</div>
         <div class="route-stop">🍶 碧雲蔵</div><div class="route-arrow">→</div>
         <div class="route-stop">🌋 弟子屈</div><div class="route-arrow">→</div>
-        <div class="route-stop">🦋 阿寒湖</div><div class="route-arrow">→</div>
+        <div class="route-stop">🪶 阿寒湖（日遊）</div><div class="route-arrow">→</div>
         <div class="route-stop new-stop">🦅 知床 ↑先</div><div class="route-arrow">→</div>
         <div class="route-stop new-stop">🚔 網走 ↓後</div><div class="route-arrow">→</div>
         <div class="route-stop">🏔 層雲峡</div><div class="route-arrow">→</div>
         <div class="route-stop">🐧 旭川</div><div class="route-arrow">→</div>
-        <div class="route-stop">🌸 美瑛・富良野</div><div class="route-arrow">→</div>
+        <div class="route-stop">🌸 美瑛</div><div class="route-arrow">→</div>
+        <div class="route-stop furano-extra">💜 富良野（2晚）</div><div class="route-arrow">→</div>
         <div class="route-stop shop">🛍 Outlet</div><div class="route-arrow">→</div>
         <div class="route-stop">✈ 新千歲</div>
       </div>
-      <p style="font-size:.8rem;color:#8899aa;margin-top:12px;">🟢 綠色 = 路線優化（知床↔網走對調）｜ 🟣 紫色 = 購物站點 ｜ ❌ 已取消：釧路（節省~5小時車程）</p>
+      <p style="font-size:.8rem;color:#8899aa;margin-top:12px;">🟢 綠色 = 路線優化（知床↔網走對調）｜ 🟣 淡紫色 = 富良野連住2晚（v4新增）｜ 🟣 深紫 = 購物站點 ｜ 🔵 阿寒湖 = 日間一日遊（v4取消過夜）</p>
     </div>
 
     <div class="info-grid">
       <div class="info-card">
-        <h3>🚗 租車建議</h3>
+        <h3>🚗 租車資訊（v4 更新）</h3>
         <ul>
-          <li><strong>推薦車型：</strong>Toyota HiAce 9人座（6人行最舒適）或分租兩輛5人座SUV</li>
-          <li><strong>租車公司：</strong>Toyota Rent a Car / Nippon（新千歲機場取還）</li>
+          <li><strong>指定車型：</strong>Toyota Alphard V4（豪華 MPV，6人行舒適首選）</li>
+          <li><strong>租車公司：</strong><a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com</a>（已聯絡確認）</li>
+          <li><strong>行李容量：</strong>店主確認可放 <strong>28寸行李箱×4 + 25寸行李箱×1</strong></li>
           <li><strong>預訂時機：</strong>提前2-3個月，7月旺季車輛緊張</li>
           <li><strong>行車規則：</strong>日本靠左行駛，最高時速80km（高速100km），ETC卡預付高速費</li>
           <li><strong>油費估算：</strong>約¥45,000-65,000（全程約2,000km）</li>
@@ -707,26 +727,25 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <ul>
           <li><strong>帶廣（1晚）：</strong>¥15,000-25,000 | Rimse</li>
           <li><strong>屈斜路王子大飯店（2晚）：</strong>¥25,000-45,000 | 湖畔溫泉</li>
-          <li><strong>阿寒湖（1晚）：</strong>¥25,000-45,000 | 温泉旅館</li>
           <li><strong>知床宇登呂（2晚）：</strong>¥30,000-50,000 | 北こぶし</li>
           <li><strong>網走（1晚）：</strong>¥12,000-20,000 | Route Inn</li>
           <li><strong>層雲峡（1晚）：</strong>¥25,000-40,000 | 温泉旅館</li>
           <li><strong>旭川（1晚）：</strong>¥20,000-30,000 | JR Inn</li>
-          <li><strong>富良野（1晚）：</strong>¥25,000-40,000 | Prince Hotel</li>
+          <li><strong>富良野（2晚）：</strong>¥25,000-40,000 | Prince Hotel ★v4新增1晚</li>
           <li><strong>新千歲近郊（1晚）：</strong>¥18,000-28,000 | ANA千歲</li>
         </ul>
       </div>
       <div class="info-card">
         <h3>💰 預算估算</h3>
         <ul>
-          <li><strong>住宿（11晚×6人）：</strong>¥220,000-360,000</li>
+          <li><strong>住宿（11晚×6人）：</strong>¥220,000-380,000</li>
           <li><strong>餐飲（12天×6人）：</strong>¥120,000-180,000</li>
           <li><strong>租車+油費+高速：</strong>¥80,000-120,000</li>
           <li><strong>景點門票：</strong>¥35,000-55,000</li>
           <li><strong>Outlet 購物：</strong>¥50,000-150,000+</li>
           <li><strong>伴手禮：</strong>¥30,000-60,000</li>
-          <li style="font-weight:700;color:var(--coral-orange);"><strong>總預算（不含機票）：</strong>¥535,000-925,000</li>
-          <li style="font-size:.8rem;color:#8899aa;">每人約 ¥90,000-155,000</li>
+          <li style="font-weight:700;color:var(--coral-orange);"><strong>總預算（不含機票）：</strong>¥535,000-945,000</li>
+          <li style="font-size:.8rem;color:#8899aa;">每人約 ¥90,000-158,000</li>
         </ul>
       </div>
     </div>
@@ -740,6 +759,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <tr><td>硫磺山</td><td>約5分鐘</td><td><span class="badge-easy">輕鬆</span></td><td>停車場到噴氣口近，平坦</td></tr>
         <tr><td>摩周湖第三展望台</td><td>約2分鐘</td><td><span class="badge-easy">輕鬆</span></td><td>停車場直達觀景台</td></tr>
         <tr><td>屈斜路湖砂湯</td><td>約5分鐘</td><td><span class="badge-easy">輕鬆</span></td><td>坐椅子泡腳，酒店步行可達</td></tr>
+        <tr><td>北海道夢幻橋</td><td>約5分鐘</td><td><span class="badge-easy">輕鬆</span></td><td>短暫停留，平坦木橋</td></tr>
         <tr><td>阿寒湖民俗村</td><td>緩步約30分</td><td><span class="badge-easy">輕鬆</span></td><td>地面平坦，可坐輪椅遊覽</td></tr>
         <tr><td>知床五湖高架木道</td><td>800m/40分</td><td><span class="badge-easy">輕鬆</span></td><td>平坦木棧道，長者可完成</td></tr>
         <tr><td>知床五湖地上步道</td><td>3km/2-3小時</td><td><span class="badge-hard">困難</span></td><td>長者走高架木道，年輕人走全程</td></tr>
@@ -748,6 +768,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <tr><td>旭山動物園</td><td>廣闊但有車</td><td><span class="badge-mod">中等</span></td><td>提供輪椅借用，部分展館有電梯</td></tr>
         <tr><td>美瑛青い池</td><td>約3分鐘</td><td><span class="badge-easy">輕鬆</span></td><td>停車場至觀景台200m，平坦</td></tr>
         <tr><td>Farm Tomita 薰衣草</td><td>約15-30分</td><td><span class="badge-easy">輕鬆</span></td><td>緩坡草地，有長椅遮陽傘</td></tr>
+        <tr><td>富良野葡萄酒廠</td><td>室內參觀</td><td><span class="badge-easy">輕鬆</span></td><td>室內參觀，無障礙設施完善</td></tr>
         <tr><td>Outlet 北広島</td><td>全室內行走</td><td><span class="badge-easy">輕鬆</span></td><td>全室內冷氣電梯，最適合長者</td></tr>
       </table>
     </div>
