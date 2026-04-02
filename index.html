@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>北海道道東・道北 六人大家庭自駕遊 2026｜7月20–31日</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 :root{--sky-blue:#4A9EBF;--coral-orange:#E8855A;--warm-white:#FAF7F2;--forest-green:#5A8F6B;--deep-navy:#2C3E50;--light-sand:#EDE8E0;--shadow:rgba(74,158,191,0.15);--radius:16px;--radius-sm:8px;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -124,13 +126,58 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 .badge-mod{background:#fef3c7;color:#92400e;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;}
 .badge-hard{background:#fee2e2;color:#991b1b;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;}
 @media(max-width:600px){.timeline{padding-left:40px;}.timeline-header{flex-wrap:wrap;}}
+
+/* ===== LEAFLET MAP SECTION ===== */
+.map-section{background:#fff;border-radius:var(--radius);box-shadow:0 4px 20px var(--shadow);margin-bottom:36px;overflow:hidden;}
+.map-header{padding:20px 24px 0;display:flex;align-items:center;justify-content:between;flex-wrap:wrap;gap:12px;}
+.map-header h3{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.15rem;color:var(--deep-navy);flex:1;}
+.map-gmaps-btn{display:inline-flex;align-items:center;gap:6px;background:var(--sky-blue);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;padding:8px 16px;border-radius:20px;text-decoration:none;transition:all .2s;white-space:nowrap;}
+.map-gmaps-btn:hover{background:#3a7d9e;transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,158,191,.4);}
+.map-legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 24px;border-bottom:1px solid var(--light-sand);}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:.72rem;color:#6a7a8e;font-weight:600;}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+#trip-map{height:480px;width:100%;}
+@media(max-width:600px){#trip-map{height:320px;}}
+.leaflet-popup-content-wrapper{border-radius:12px!important;box-shadow:0 8px 24px rgba(0,0,0,.15)!important;}
+.leaflet-popup-content{font-family:'Noto Sans TC',sans-serif;font-size:.82rem;line-height:1.6;min-width:160px;}
+.popup-day{font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:var(--sky-blue);margin-bottom:2px;}
+.popup-title{font-weight:700;font-size:.88rem;color:var(--deep-navy);margin-bottom:4px;}
+.popup-detail{color:#6a7a8e;font-size:.78rem;}
+.popup-night{display:inline-block;background:var(--light-sand);border-radius:6px;padding:2px 8px;font-size:.72rem;font-weight:600;margin-top:4px;color:var(--deep-navy);}
+
+/* ===== DISNEY ROUTE MAP ===== */
+.route-journey{background:linear-gradient(135deg,#fff9ff 0%,#f0f8ff 50%,#fff5f0 100%);border:2px solid rgba(74,158,191,0.18);border-radius:var(--radius);padding:28px 24px 20px;margin-bottom:36px;box-shadow:0 6px 24px rgba(74,158,191,0.1);}
+.route-journey h3{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.2rem;color:var(--deep-navy);margin-bottom:6px;}
+.route-journey h3 span{color:var(--sky-blue);font-size:.85rem;font-weight:600;}
+.journey-subtitle{font-size:.82rem;color:#8899aa;margin-bottom:18px;}
+.journey-strip{display:flex;align-items:center;gap:0;overflow-x:auto;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--sky-blue) #eee;}
+.journey-strip::-webkit-scrollbar{height:4px;}
+.journey-strip::-webkit-scrollbar-thumb{background:var(--sky-blue);border-radius:4px;}
+.jcard{display:flex;flex-direction:column;align-items:center;min-width:88px;max-width:88px;background:#fff;border-radius:14px;padding:10px 6px 8px;box-shadow:0 3px 12px rgba(74,158,191,0.13);border:2px solid transparent;transition:all .2s;cursor:default;position:relative;}
+.jcard:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(74,158,191,0.22);border-color:var(--sky-blue);}
+.jcard.day-east{border-top:4px solid var(--sky-blue);}
+.jcard.day-north{border-top:4px solid var(--forest-green);}
+.jcard.day-shop{border-top:4px solid #8b5cf6;}
+.jcard.day-furano{border-top:4px solid #c084fc;}
+.jcard.day-return{border-top:4px solid var(--coral-orange);}
+.jcard-char{font-size:2rem;line-height:1;margin-bottom:4px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1));}
+.jcard-daynum{font-family:'Nunito',sans-serif;font-weight:900;font-size:.72rem;color:#fff;background:var(--sky-blue);border-radius:10px;padding:1px 7px;margin-bottom:3px;letter-spacing:.5px;}
+.jcard.day-north .jcard-daynum{background:var(--forest-green);}
+.jcard.day-shop .jcard-daynum{background:#8b5cf6;}
+.jcard.day-furano .jcard-daynum{background:#c084fc;}
+.jcard.day-return .jcard-daynum{background:var(--coral-orange);}
+.jcard-date{font-size:.68rem;color:#8899aa;font-weight:600;margin-bottom:3px;}
+.jcard-place{font-size:.7rem;color:var(--deep-navy);font-weight:700;text-align:center;line-height:1.35;}
+.jcard-night{font-size:.62rem;color:#aab;margin-top:3px;text-align:center;line-height:1.3;}
+.jarrow{display:flex;flex-direction:column;align-items:center;padding:0 2px;min-width:22px;color:var(--coral-orange);font-size:.95rem;font-weight:900;flex-shrink:0;margin-top:-16px;}
+.jarrow-km{font-size:.55rem;color:#bbc;font-weight:600;text-align:center;line-height:1.2;margin-top:1px;}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <span class="emoji-deco">🚗🌸🦅</span>
-  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v4.2 修訂版 ✦</div>
+  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v4.4 修訂版 ✦</div>
   <h1>北海道 道東・道北<br>六人大家庭自駕遊</h1>
   <p class="hero-sub">2026年 7月20日（一）→ 7月31日（五）｜12天11夜・本人・家姐・妻子・成年女兒・老頭子・老媽子（75歲以上）</p>
   <div class="hero-stats">
@@ -181,8 +228,156 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
     </div>
 
     <p style="font-size:.88rem;color:#6a7a8e;background:#fff8f0;padding:14px 18px;border-radius:10px;margin-bottom:32px;border-left:4px solid var(--coral-orange);">
-      <strong>v4.2 修訂重點：</strong>① Day 3 大合拼——舊 Day 3 + Day 4 行程合為一天（硫黃山→摩周湖→屈斜路湖砂湯→北海道夢幻橋→阿寒湖→愛努族民俗村），當晚返回弟子屈住宿，取消阿寒湖過夜 ② Day 4 由弟子屈直接前往知床（世界遺產入境）③ 富良野增加1晚，深度遊薰衣草花海區 ④ 租車改用 Toyota Alphard V4（車主確認可放 28寸×4 + 25寸×1）
+      <strong>v4.4 修訂重點：</strong>① Day 3 大合拼——舊 Day 3 + Day 4 行程合為一天（硫黃山→摩周湖→屈斜路湖砂湯→北海道夢幻橋→阿寒湖→愛努族民俗村），當晚返回弟子屈住宿，取消阿寒湖過夜 ② Day 4 由弟子屈直接前往知床（世界遺產入境）③ 富良野增加1晚，深度遊薰衣草花海區 ④ 租車改用 Toyota Alphard V4（車主確認可放 28寸×4 + 25寸×1）
     </p>
+
+    <!-- LEAFLET INTERACTIVE MAP -->
+    <div class="map-section">
+      <div class="map-header">
+        <h3>🗺 互動路線地圖｜點擊各站查看行程</h3>
+        <a class="map-gmaps-btn" href="https://www.google.com/maps/dir/New+Chitose+Airport,+Hokkaido/Obihiro,+Hokkaido/Teshikaga,+Hokkaido/Lake+Akan,+Hokkaido/Utoro,+Shari,+Hokkaido/Abashiri,+Hokkaido/Sounkyo+Gorge,+Hokkaido/Asahikawa,+Hokkaido/Biei,+Hokkaido/Furano,+Hokkaido/Mitsui+Outlet+Park+Sapporo+Kitahiroshima/New+Chitose+Airport,+Hokkaido" target="_blank">
+          🔗 在 Google Maps 開啟完整路線
+        </a>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#4A9EBF;"></div>道東路段</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#5A8F6B;"></div>道北路段</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#c084fc;"></div>富良野連住</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6;"></div>Outlet/購物</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#E8855A;"></div>起點/終點</div>
+        <div class="legend-item" style="margin-left:auto;font-style:italic;">⭐ = 特別亮點</div>
+      </div>
+      <div id="trip-map"></div>
+    </div>
+
+    <!-- DISNEY ROUTE MAP -->
+    <div class="route-journey">
+      <h3>🗺 12天行程路線圖 <span>｜每站都有Disney小夥伴陪同！</span></h3>
+      <p class="journey-subtitle">橫向滑動查看全程路線 · 色條顏色：🔵道東 · 🟢道北 · 🟣富良野 · 🛍購物 · 🟠返程</p>
+      <div class="journey-strip">
+
+        <!-- Day 1 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">🏰</div>
+          <div class="jcard-daynum">Day 1</div>
+          <div class="jcard-date">7/20 一</div>
+          <div class="jcard-place">✈新千歲<br>→帶廣</div>
+          <div class="jcard-night">🏨帶廣</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">240km</div></div>
+
+        <!-- Day 2 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">🐷</div>
+          <div class="jcard-daynum">Day 2</div>
+          <div class="jcard-date">7/21 二</div>
+          <div class="jcard-place">幸福駅<br>碧雲蔵</div>
+          <div class="jcard-night">🏨弟子屈</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">130km</div></div>
+
+        <!-- Day 3 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">🦁</div>
+          <div class="jcard-daynum">Day 3</div>
+          <div class="jcard-date">7/22 三</div>
+          <div class="jcard-place">硫黃山<br>摩周湖<br>阿寒湖★</div>
+          <div class="jcard-night">🏨弟子屈</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">120km</div></div>
+
+        <!-- Day 4 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">🐻</div>
+          <div class="jcard-daynum">Day 4</div>
+          <div class="jcard-date">7/23 四</div>
+          <div class="jcard-place">弟子屈<br>→知床</div>
+          <div class="jcard-night">🏨知床</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">連住</div></div>
+
+        <!-- Day 5 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">🐳</div>
+          <div class="jcard-daynum">Day 5</div>
+          <div class="jcard-date">7/24 五</div>
+          <div class="jcard-place">知床峠<br>羅臼觀鯨</div>
+          <div class="jcard-night">🏨知床</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">70km</div></div>
+
+        <!-- Day 6 -->
+        <div class="jcard day-east">
+          <div class="jcard-char">⛄</div>
+          <div class="jcard-daynum">Day 6</div>
+          <div class="jcard-date">7/25 六</div>
+          <div class="jcard-place">知床<br>→網走</div>
+          <div class="jcard-night">🏨網走</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">140km</div></div>
+
+        <!-- Day 7 -->
+        <div class="jcard day-north">
+          <div class="jcard-char">🏹</div>
+          <div class="jcard-daynum">Day 7</div>
+          <div class="jcard-date">7/26 日</div>
+          <div class="jcard-place">網走<br>→層雲峡</div>
+          <div class="jcard-night">🏨層雲峡</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">65km</div></div>
+
+        <!-- Day 8 -->
+        <div class="jcard day-north">
+          <div class="jcard-char">🐧</div>
+          <div class="jcard-daynum">Day 8</div>
+          <div class="jcard-date">7/27 一</div>
+          <div class="jcard-place">層雲峡<br>→旭川</div>
+          <div class="jcard-night">🏨旭川</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">60km</div></div>
+
+        <!-- Day 9 -->
+        <div class="jcard day-north">
+          <div class="jcard-char">🌹</div>
+          <div class="jcard-daynum">Day 9</div>
+          <div class="jcard-date">7/28 二</div>
+          <div class="jcard-place">旭川<br>美瑛<br>→富良野</div>
+          <div class="jcard-night">🏨富良野</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">連住</div></div>
+
+        <!-- Day 10 -->
+        <div class="jcard day-furano">
+          <div class="jcard-char">👸</div>
+          <div class="jcard-daynum">Day 10</div>
+          <div class="jcard-date">7/29 三</div>
+          <div class="jcard-place">富良野<br>深度遊★</div>
+          <div class="jcard-night">🏨富良野</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">100km</div></div>
+
+        <!-- Day 11 -->
+        <div class="jcard day-shop">
+          <div class="jcard-char">🛍️</div>
+          <div class="jcard-daynum">Day 11</div>
+          <div class="jcard-date">7/30 四</div>
+          <div class="jcard-place">Outlet<br>北広島</div>
+          <div class="jcard-night">🏨新千歲</div>
+        </div>
+        <div class="jarrow">→<div class="jarrow-km">20km</div></div>
+
+        <!-- Day 12 -->
+        <div class="jcard day-return">
+          <div class="jcard-char">🧚</div>
+          <div class="jcard-daynum">Day 12</div>
+          <div class="jcard-date">7/31 五</div>
+          <div class="jcard-place">✈新千歲<br>出發回家</div>
+          <div class="jcard-night">再見北海道</div>
+        </div>
+
+      </div><!-- end journey-strip -->
+      <p style="font-size:.75rem;color:#aab;margin-top:10px;text-align:center;">⭐ = v4.4 特色亮點 Day ｜ 🐷三隻小豬=豚丼 · 🦁辛巴=道東大冒險 · 🐻熊大=知床棕熊 · 🐳海底總動員=觀鯨 · ⛄雪寶=流氷館 · 🏹梅達=層雲峡山地 · 🐧快樂腳=旭山動物園 · 🌹美女與野獸=花田 · 👸長髮公主=富良野花海 · 🛍️米妮=購物天 · 🧚小叮噹=再見！</p>
+    </div>
 
     <div class="timeline">
 
@@ -508,7 +703,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-attractions">
   <div class="container">
     <p class="section-title">🏛 精選景點 <span>｜道東 & 道北 & 購物</span></p>
-    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v4.2修訂版）</p>
+    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v4.4修訂版）</p>
     <div class="cards-grid">
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -548,7 +743,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <div class="stars">★★★★☆</div><div class="card-tip">💡 傳統舞蹈每晚演出，可預購座位</div>
         <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">文化</span>
         <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
-        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。v4.2安排日間一日遊，看完舞蹈後返回弟子屈住宿。</p></div>
+        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。v4.4安排日間一日遊，看完舞蹈後返回弟子屈住宿。</p></div>
       </div></div>
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -686,10 +881,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-info">
   <div class="container">
     <p class="section-title">🚗 交通 &amp; 實用資訊</p>
-    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v4.2 修訂版）</p>
+    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v4.4 修訂版）</p>
 
     <div class="route-visual">
-      <h3>🗺 行程路線總覽（v4.2 最終版）</h3>
+      <h3>🗺 行程路線總覽（v4.4 最終版）</h3>
       <div class="route-flow">
         <div class="route-stop">✈ 新千歲</div><div class="route-arrow">→</div>
         <div class="route-stop">🍖 帶廣</div><div class="route-arrow">→</div>
@@ -710,7 +905,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 
     <div class="info-grid">
       <div class="info-card">
-        <h3>🚗 租車資訊（v4.2 更新）</h3>
+        <h3>🚗 租車資訊（v4.4 更新）</h3>
         <ul>
           <li><strong>指定車型：</strong>Toyota Alphard V4（豪華 MPV，6人行舒適首選）</li>
           <li><strong>租車公司：</strong><a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com</a>（已聯絡確認）</li>
@@ -788,11 +983,96 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 </div>
 
 <script>
+/* ===== LEAFLET MAP INIT ===== */
+var tripMap = null;
+function initMap(){
+  if(tripMap) return;
+  tripMap = L.map('trip-map',{zoomControl:true,scrollWheelZoom:false}).setView([43.6,143.2],7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom:18
+  }).addTo(tripMap);
+
+  var stops=[
+    {lat:42.7772,lng:141.6922,day:'Day 1',date:'7/20',char:'🏰',title:'✈ 新千歲機場 → 帶廣',detail:'租車 Toyota Alphard，出發！',night:'帶廣住宿',color:'#E8855A',seg:'east'},
+    {lat:42.9176,lng:143.1967,day:'Day 2',date:'7/21',char:'🐷',title:'帶廣 → 弟子屈',detail:'幸福車站・豚丼一番・碧雲蔵・弟子屈拉麵',night:'屈斜路王子大飯店',color:'#4A9EBF',seg:'east'},
+    {lat:43.4889,lng:144.4653,day:'Day 3 ⭐',date:'7/22',char:'🦁',title:'道東精華大日！',detail:'硫黃山・摩周湖・屈斜路湖砂湯・北海道夢幻橋・阿寒湖・愛努族民俗村',night:'屈斜路王子大飯店（連住）',color:'#4A9EBF',seg:'east'},
+    {lat:43.4516,lng:144.0917,day:'Day 3 日遊',date:'7/22',char:'🪶',title:'阿寒湖（一日遊）',detail:'愛努族民俗村・夢幻橋・當天返回弟子屈',night:'不過夜',color:'#6ab0c8',seg:'east'},
+    {lat:44.0786,lng:144.9792,day:'Day 4',date:'7/23',char:'🐻',title:'弟子屈 → 知床',detail:'知床五湖・知床觀光船・知床峠',night:'宇登呂温泉',color:'#4A9EBF',seg:'east'},
+    {lat:43.9800,lng:144.9500,day:'Day 5',date:'7/24',char:'🐳',title:'知床深度遊',detail:'知床峠・羅臼觀鯨船・深夜觀星',night:'宇登呂温泉（連住）',color:'#4A9EBF',seg:'east'},
+    {lat:44.0188,lng:144.2720,day:'Day 6',date:'7/25',char:'⛄',title:'知床 → 網走',detail:'網走監獄博物館・鄂霍次克流氷館（-15°C體驗！）',night:'網走',color:'#4A9EBF',seg:'east'},
+    {lat:43.7314,lng:142.9706,day:'Day 7',date:'7/26',char:'🏹',title:'網走 → 層雲峡',detail:'銀河の滝・流星の滝・黒岳纜車・層雲峡温泉',night:'層雲峡温泉',color:'#5A8F6B',seg:'north'},
+    {lat:43.7705,lng:142.3651,day:'Day 8',date:'7/27',char:'🐧',title:'層雲峡 → 旭川',detail:'旭山動物園（企鵝・北極熊・猩猩！）・旭川拉麵',night:'旭川',color:'#5A8F6B',seg:'north'},
+    {lat:43.3427,lng:142.3828,day:'Day 9',date:'7/28',char:'🌹',title:'旭川 → 美瑛 → 富良野',detail:'青い池・四季彩の丘・Farm Tomita薰衣草花田',night:'富良野プリンスホテル',color:'#5A8F6B',seg:'north'},
+    {lat:43.3600,lng:142.3950,day:'Day 10 ⭐',date:'7/29',char:'👸',title:'富良野深度遊（新增！）',detail:'かんのファーム・富良野葡萄酒廠・慢活田園一天',night:'富良野プリンスホテル（連住）',color:'#c084fc',seg:'furano'},
+    {lat:42.9851,lng:141.5566,day:'Day 11',date:'7/30',char:'🛍️',title:'三井Outlet 北広島',detail:'約320店掃貨！Coach・Nike・Uniqlo・無印良品',night:'新千歲近郊',color:'#8b5cf6',seg:'shop'},
+    {lat:42.7772,lng:141.6922,day:'Day 12',date:'7/31',char:'🧚',title:'✈ 返程出發',detail:'機場最後掃貨・海鮮丼・再見北海道！',night:'小叮噹說再見！',color:'#E8855A',seg:'return'}
+  ];
+
+  function makeIcon(stop,idx){
+    var bgColor=stop.color;
+    var label=stop.char;
+    var html='<div style="background:'+bgColor+';width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);cursor:pointer;">'+label+'</div>';
+    return L.divIcon({html:html,className:'',iconSize:[38,38],iconAnchor:[19,19],popupAnchor:[0,-20]});
+  }
+
+  var routeCoords=[];
+  var routeSegColors=[];
+  var lastSeg='';
+
+  stops.forEach(function(s,i){
+    var mk=L.marker([s.lat,s.lng],{icon:makeIcon(s,i)}).addTo(tripMap);
+    var popHtml='<div class="popup-day">'+s.char+' '+s.day+'</div>'
+      +'<div class="popup-title">'+s.title+'</div>'
+      +'<div class="popup-detail">'+s.detail+'</div>'
+      +'<div class="popup-night">🏨 '+s.night+'</div>';
+    mk.bindPopup(popHtml,{maxWidth:220});
+
+    if(s.seg!=='east'||lastSeg!==s.seg){
+      if(routeCoords.length>1){
+        var c=lastSeg==='east'?'#4A9EBF':lastSeg==='north'?'#5A8F6B':lastSeg==='furano'?'#c084fc':lastSeg==='shop'?'#8b5cf6':'#E8855A';
+        L.polyline(routeCoords.slice(-2),{color:c,weight:3.5,opacity:.85,dashArray:s.seg==='east'&&i<4?null:'6,4'}).addTo(tripMap);
+      }
+    }
+    routeCoords.push([s.lat,s.lng]);
+    lastSeg=s.seg;
+  });
+
+  /* draw full route as segments */
+  var segments=[
+    {pts:[[42.7772,141.6922],[42.9176,143.1967],[43.4889,144.4653]],color:'#4A9EBF'},
+    {pts:[[43.4889,144.4653],[43.4516,144.0917]],color:'#6ab0c8',dash:'4,6'},
+    {pts:[[43.4889,144.4653],[44.0786,144.9792],[43.9800,144.9500],[44.0188,144.2720]],color:'#4A9EBF'},
+    {pts:[[44.0188,144.2720],[43.7314,142.9706],[43.7705,142.3651]],color:'#5A8F6B'},
+    {pts:[[43.7705,142.3651],[43.5887,142.4686],[43.3427,142.3828],[43.3600,142.3950]],color:'#5A8F6B'},
+    {pts:[[43.3600,142.3950],[42.9851,141.5566],[42.7772,141.6922]],color:'#8b5cf6'}
+  ];
+  segments.forEach(function(seg){
+    L.polyline(seg.pts,{color:seg.color,weight:4,opacity:.82,dashArray:seg.dash||null,lineJoin:'round'}).addTo(tripMap);
+  });
+
+  /* Google Maps button for each day */
+  var gmapsUrls={
+    'Day 1':'https://maps.google.com/?q=New+Chitose+Airport+Hokkaido',
+    'Day 4':'https://maps.google.com/?q=Shiretoko+Hokkaido',
+    'Day 6':'https://maps.google.com/?q=Abashiri+Hokkaido',
+    'Day 7':'https://maps.google.com/?q=Sounkyo+Gorge+Hokkaido'
+  };
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  /* init map when itinerary tab is active on load */
+  if(document.getElementById('tab-itinerary').classList.contains('active')){
+    setTimeout(initMap,100);
+  }
+});
+
 function switchTab(tabId,btn){
   document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+tabId).classList.add('active');
   btn.classList.add('active');
+  if(tabId==='itinerary'){setTimeout(function(){initMap();if(tripMap)tripMap.invalidateSize();},150);}
 }
 function toggleDay(id){
   const body=document.getElementById(id);
