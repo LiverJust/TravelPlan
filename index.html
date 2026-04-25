@@ -75,6 +75,28 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 .outlet-highlight{background:linear-gradient(135deg,#fdf5ff,#f0e8ff);border-left:4px solid #8b5cf6;border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#5b21b6;}
 .sake-highlight{background:linear-gradient(135deg,#fff8f0,#fff0e8);border-left:4px solid var(--coral-orange);border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#7c3a00;}
 .furano-highlight{background:linear-gradient(135deg,#f5f0ff,#fff0fa);border-left:4px solid #c084fc;border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#6b21a8;}
+.stay-confirmed{background:linear-gradient(135deg,#f0fdf4,#e8f7ef);border:1.5px solid #86efac;border-radius:var(--radius-sm);padding:12px 16px;margin-top:12px;font-size:.86rem;font-weight:600;}
+.stay-confirmed .hotel-name{color:#166534;font-weight:800;font-size:.9rem;}
+.stay-confirmed .hotel-en{color:#4a7a5e;font-weight:500;font-size:.78rem;}
+.booking-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.pill{display:inline-flex;align-items:center;gap:3px;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:12px;}
+.pill-price{background:#dcfce7;color:#166534;}
+.pill-bkf-y{background:#e0f2fe;color:#0369a1;}
+.pill-bkf-n{background:#f1f5f9;color:#94a3b8;}
+.pill-din-y{background:#fef3c7;color:#92400e;}
+.pill-din-n{background:#f1f5f9;color:#94a3b8;}
+.pill-park{background:#f3e8ff;color:#6d28d9;}
+.pill-agoda{background:#fff0ea;color:#e8855a;}
+.pill-hotel{background:#e8f4fd;color:#4A9EBF;}
+.hotel-summary-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:8px;}
+.hotel-summary-table th{background:var(--sky-blue);color:#fff;padding:9px 12px;font-family:'Nunito',sans-serif;font-weight:700;text-align:left;}
+.hotel-summary-table td{padding:9px 12px;border-bottom:1px solid var(--light-sand);vertical-align:middle;}
+.hotel-summary-table tr:nth-child(even) td{background:#f8fbfd;}
+.hotel-summary-table tr:hover td{background:#f0f8ff;}
+.htag-y{color:#16a34a;font-weight:700;}
+.htag-n{color:#94a3b8;}
+.htag-price{font-family:'Nunito',sans-serif;font-weight:800;color:var(--deep-navy);}
+.total-row td{background:linear-gradient(90deg,#e8f4fd,#f0fdf4)!important;font-weight:700;}
 .car-highlight{background:linear-gradient(135deg,#f0f9ff,#e8f4fd);border-left:4px solid var(--sky-blue);border-radius:var(--radius-sm);padding:14px 18px;margin-top:10px;font-size:.88rem;color:#1e3a5f;}
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 @media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr);}}
@@ -177,7 +199,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 
 <div class="hero">
   <span class="emoji-deco">🚗🌸🦅</span>
-  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v4.4 修訂版 ✦</div>
+  <div class="hero-badge">✦ 6-PERSON FAMILY ROAD TRIP 2026 · v4.5 修訂版 ✦</div>
   <h1>北海道 道東・道北<br>六人大家庭自駕遊</h1>
   <p class="hero-sub">2026年 7月20日（一）→ 7月31日（五）｜12天11夜・本人・家姐・妻子・成年女兒・老頭子・老媽子（75歲以上）</p>
   <div class="hero-stats">
@@ -228,7 +250,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
     </div>
 
     <p style="font-size:.88rem;color:#6a7a8e;background:#fff8f0;padding:14px 18px;border-radius:10px;margin-bottom:32px;border-left:4px solid var(--coral-orange);">
-      <strong>v4.4 修訂重點：</strong>① Day 3 大合拼——舊 Day 3 + Day 4 行程合為一天（硫黃山→摩周湖→屈斜路湖砂湯→北海道夢幻橋→阿寒湖→愛努族民俗村），當晚返回弟子屈住宿，取消阿寒湖過夜 ② Day 4 由弟子屈直接前往知床（世界遺產入境）③ 富良野增加1晚，深度遊薰衣草花海區 ④ 租車改用 Toyota Alphard V4（車主確認可放 28寸×4 + 25寸×1）
+      <strong>v4.5 修訂重點：</strong>① 全部11晚酒店已確認預訂 ✅ ② 更新住宿詳情（房價、早餐、晚餐、停車、付款方式）③ 住宿一覽表新增總計 ¥1,197,980 ④ 每日行程顯示已確認預訂標籤
     </p>
 
     <!-- LEAFLET INTERACTIVE MAP -->
@@ -376,7 +398,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         </div>
 
       </div><!-- end journey-strip -->
-      <p style="font-size:.75rem;color:#aab;margin-top:10px;text-align:center;">⭐ = v4.4 特色亮點 Day ｜ 🐷三隻小豬=豚丼 · 🦁辛巴=道東大冒險 · 🐻熊大=知床棕熊 · 🐳海底總動員=觀鯨 · ⛄雪寶=流氷館 · 🏹梅達=層雲峡山地 · 🐧快樂腳=旭山動物園 · 🌹美女與野獸=花田 · 👸長髮公主=富良野花海 · 🛍️米妮=購物天 · 🧚小叮噹=再見！</p>
+      <p style="font-size:.75rem;color:#aab;margin-top:10px;text-align:center;">⭐ = v4.5 特色亮點 Day ｜ 🐷三隻小豬=豚丼 · 🦁辛巴=道東大冒險 · 🐻熊大=知床棕熊 · 🐳海底總動員=觀鯨 · ⛄雪寶=流氷館 · 🏹梅達=層雲峡山地 · 🐧快樂腳=旭山動物園 · 🌹美女與野獸=花田 · 👸長髮公主=富良野花海 · 🛍️米妮=購物天 · 🧚小叮噹=再見！</p>
     </div>
 
     <div class="timeline">
@@ -402,7 +424,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           </ul>
           <div class="car-highlight">🚗 <strong>Toyota Alphard V4 行李資訊：</strong>店主確認可安放 28寸行李箱×4 + 25寸行李箱×1，6人家庭行程完全夠用！如需更多行李空間，可將部分行李置於座椅旁。租車詳情：<a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com/cn/qa</a></div>
           <div class="tip-box">💡 Day 2 午餐安排帶廣豚丼一番，所以 Day 1 晚餐改吃インデアンカレー，避免重複，兩種帶廣名物都嘗到！</div>
-          <div class="stay-info">🏨 今晚住宿：帶廣市區（推薦 <strong>裡滿士飯店 Rimse Obihiro</strong> 或 <strong>帶廣廣場酒店</strong>，需確認有電梯）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 1<br>
+            <span class="hotel-name">🏨 北海道森林溫泉度假酒店</span><br>
+            <span class="hotel-en">Spa Resort in the Forest Hokkaido Hotel</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥104,586</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -429,7 +461,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <div class="sake-highlight">🍶 <strong>碧雲蔵小知識：</strong>上川大雪酒造創立於2018年，是北海道近年最受矚目的地酒品牌。碧雲蔵（帶廣）與本店（層雲峡附近上川町）均可購買，但限定款式各有不同。7月有夏季限定「吟醸生酒」和「純米大吟醸」，建議購入2-3瓶作伴手禮！</div>
           <div class="tip-box">💡 帶廣出發前可在市區超市採購零食和飲料。弟子屈的屈斜路王子大飯店直接位於屈斜路湖畔，入住後可享受湖景！</div>
           <div class="senior-alert">♿ <strong>長者友善評估：</strong>舊幸福車站廣場平坦，長者可輕鬆散步。碧雲蔵 Shop 室內購物，全程無須步行遠路。帶廣→弟子屈途中建議在足寄道之駅停車休息一次（約1小時後）。</div>
-          <div class="stay-info">🏨 今晚住宿：<strong>屈斜路プリンスホテル（屈斜路王子大飯店）</strong>——直接位於屈斜路湖畔，有大浴場，湖景絕美。地址：北海道川上郡弟子屈町屈斜路</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 2<br>
+            <span class="hotel-name">🏨 屈斜路王子太飯店</span><br>
+            <span class="hotel-en">Kussharo Prince Hotel｜直接位於屈斜路湖畔，湖景絕美！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥230,700（2晚合計）</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-y">🍽 晚餐 ✓</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-hotel">💳 酒店付款</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -457,7 +499,16 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           </ul>
           <div class="tip-box">💡 <strong>行程安排建議：</strong>早上8:00出發，先走硫黃山→摩周湖（上午）→砂湯（中午）→夢幻橋（下午）→阿寒湖愛努族民俗村（傍晚-晚上）→返回弟子屈。充實但精彩的一天！愛努族舞蹈通常19:00或20:00演出，看完即可返程。</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>硫黃山停車場到火山口步行僅5分鐘，平坦。摩周湖第三展望台停車場直達，完全適合長者。砂湯沙灘柔軟，長者坐椅子泡腳即可。阿寒湖民俗村地面平坦，愛努族舞蹈在室內劇場有座椅。</div>
-          <div class="stay-info">🏨 今晚住宿：<strong>屈斜路プリンスホテル（連住第2晚）</strong>——日間精華遊覽阿寒湖後返回弟子屈過夜，免去搬行李之苦！</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 3（連住第2晚）<br>
+            <span class="hotel-name">🏨 屈斜路王子太飯店</span><br>
+            <span class="hotel-en">Kussharo Prince Hotel｜日間一日遊阿寒湖後返回，免搬行李！</span>
+            <div class="booking-pills">
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-y">🍽 晚餐 ✓</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-hotel">💳 酒店付款</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -483,7 +534,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <div class="route-badge">📍 路線優化：先知床→後網走，知床→網走僅70km（1小時），大幅縮短後段路程！</div>
           <div class="tip-box">💡 <strong>知床五湖重要提醒：</strong>7月開放「地上步道自由散步」，需在入口處登記並觀看5分鐘熊出沒說明影片。可在現場租借防熊噴霧。</div>
           <div class="senior-alert">♿ <strong>長者友善方案：</strong>知床五湖地上步道全程3km，對75歲以上長者較吃力。建議長者走「高架木道（800m、平坦、無需登記）」，從1號湖展望台遠眺即景色絕美。年輕成員走全程後在入口廣場匯合。</div>
-          <div class="stay-info">🏨 今晚住宿：宇登呂温泉（推薦 <strong>知床グランドホテル北こぶし</strong>——有電梯、無障礙客房，長者首選）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 4<br>
+            <span class="hotel-name">🏨 奇奇知床自然度假村</span><br>
+            <span class="hotel-en">Kiki Shiretoko Natural Resort｜宇登呂温泉，知床首選！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥156,348</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-y">🍽 晚餐 ✓</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -508,7 +569,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
             <li><span class="activity-icon">⭐</span><span><strong>深夜觀星</strong>：知床遠離城市光污染，夏夜晴天可見銀河橫跨天際，北海道最佳觀星地點之一</span></li>
           </ul>
           <div class="senior-alert">♿ <strong>長者友善：</strong>羅臼觀鯨大型船有室內座位和廁所，長者可在室內欣賞。觀星如長者怕冷，可在酒店陽台觀星，同樣效果極佳。</div>
-          <div class="stay-info">🏨 今晚住宿：宇登呂温泉（連住2晚）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 5（連住第2晚）<br>
+            <span class="hotel-name">🏨 奇奇知床自然度假村</span><br>
+            <span class="hotel-en">Kiki Shiretoko Natural Resort</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥128,920</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -535,7 +606,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <div class="route-badge">✅ 路線優化：知床→網走僅70km（1小時），比舊路線節省約200km車程！</div>
           <div class="tip-box">💡 7月網走平均氣溫僅18°C，非常舒適！進入流氷館時提供租借外套，長者進去前先穿好防寒衣物。</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>流氷館有升降機，長者方便參觀。監獄博物館建議乘坐館內電動車（有收費接駁服務），節省長者體力。</div>
-          <div class="stay-info">🏨 今晚住宿：網走市（推薦 <strong>東橫Inn 網走站前</strong> 或 <strong>ホテルルートイン網走</strong>）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 6<br>
+            <span class="hotel-name">🏨 網走湖莊大酒店</span><br>
+            <span class="hotel-en">Hotel Abashirikoso｜網走湖畔，景觀絕佳！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥105,600</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-hotel">💳 酒店付款</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -561,7 +642,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           </ul>
           <div class="tip-box">💡 層雲峡是大雪山國立公園的門戶，夏天峽谷翠綠、瀑布澎湃，完全不遜色秋季紅葉！銀河・流星雙瀑是全程最好拍照的自然景點之一。</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>大函・小函步道平坦，長者可慢步欣賞。雙瀑布距停車場僅5分鐘，完全適合長者。黒岳纜車有座位，上山後在觀景台休息眺望，無需步行登頂。</div>
-          <div class="stay-info">🏨 今晚住宿：層雲峡温泉（推薦 <strong>層雲峡観光ホテル</strong> 或 <strong>朝陽リゾートホテル</strong>，有電梯・無障礙房・溫泉大浴場）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 7<br>
+            <span class="hotel-name">🏨 朝陽度假酒店</span><br>
+            <span class="hotel-en">Choyo Resort Hotel｜層雲峡大峽谷旁，溫泉大浴場！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥99,336</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-y">🍽 晚餐 ✓</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -585,7 +676,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
             <li><span class="activity-icon">🍺</span><span>晚餐：<strong>旭川ラーメン</strong>——濃厚醬油・豚骨雙湯底，推薦「蜂屋」（創業70年）或「青葉」</span></li>
           </ul>
           <div class="senior-alert">♿ <strong>長者友善：</strong>旭山動物園提供免費輪椅借用（押金¥500），園區地面硬化平整。建議下午2點後入場，避開早上人流，天氣涼快時體驗更佳。</div>
-          <div class="stay-info">🏨 今晚住宿：旭川市（推薦 <strong>JRイン旭川</strong> 或 <strong>ドーミーイン旭川</strong>——車站附近，電梯齊全）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 8<br>
+            <span class="hotel-name">🏨 普樂美雅飯店</span><br>
+            <span class="hotel-en">Premier Hotel -CABIN- Asahikawa｜注意：停車需收費！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥87,480</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車收費</span>
+              <span class="pill pill-hotel">💳 酒店付款</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -612,7 +713,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           </ul>
           <div class="tip-box">💡 7月28日富良野薰衣草正值高峰！Farm Tomita 人多，建議清早開門即前往。今晚在富良野住宿，明天還有整天繼續深度遊！</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>Farm Tomita 花田緩坡草地，長者步行15-30分鐘即可欣賞主要花田，有長椅和遮陽傘。四季彩の丘電動車（¥500）長者坐車遊覽最舒適。青い池停車場至觀景台步行200m，平坦。</div>
-          <div class="stay-info">🏨 今晚住宿：富良野（推薦 <strong>富良野プリンスホテル</strong>——無障礙設施完善，有大浴場，長者最舒適）｜ 明天繼續住富良野！</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 9<br>
+            <span class="hotel-name">🏨 富良野酒店</span><br>
+            <span class="hotel-en">FURANO HOTEL｜薰衣草花田中心地帶，明天繼續連住！</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥214,112（2晚合計）</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -640,7 +751,16 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <div class="furano-highlight">💜 <strong>富良野深度遊小貼士：</strong>7月29日薰衣草仍處盛期！中富良野・上富良野一帶共有數十個私人花田，各有特色。建議租借單車悠閒探索，感受北海道最純樸的田園風光。富良野市中心有多家在地餐廳，午餐可嘗試富良野起司牛排定食。</div>
           <div class="tip-box">💡 今天是全程最輕鬆的一天！不趕行程，慢慢欣賞花田，在農村小店尋寶，感受富良野最真實的悠閒魅力。長者可在酒店休息，精力充沛者外出探索。</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>今天行程完全自由，長者可選擇在酒店享受溫泉和設施。如外出，花田停車場直達，無需長途步行。富良野葡萄酒廠室內參觀，舒適無障礙。</div>
-          <div class="stay-info">🏨 今晚住宿：富良野（連住第2晚，富良野プリンスホテル）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 10（連住第2晚）<br>
+            <span class="hotel-name">🏨 富良野酒店</span><br>
+            <span class="hotel-en">FURANO HOTEL</span>
+            <div class="booking-pills">
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -667,7 +787,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <div class="outlet-highlight">🛍 <strong>Outlet 實用資訊：</strong>營業時間 10:00–20:00 ｜距新千歲機場僅<strong>20分鐘車程</strong>｜地址：北海道北広島市大曲幸町7丁目1番地｜免費大型停車場｜有寄物服務方便大件購物｜建議10點準時開門入場！</div>
           <div class="tip-box">💡 購物後直接前往新千歲附近酒店，距機場只需20-30分鐘，明天早上輕鬆出發！</div>
           <div class="senior-alert">♿ <strong>長者友善：</strong>全室內行走、有電梯和手扶電梯，地面全程平整。中央廣場有大量座椅，長者可坐下休息讓家人分組購物後匯合。全程最適合長者的活動日！</div>
-          <div class="stay-info">🏨 今晚住宿：新千歲機場近郊（推薦 <strong>北広島クラッセホテル</strong> 或 <strong>ANAクラウンプラザホテル千歳</strong>——距Outlet 10分鐘，距機場20分鐘）</div>
+          <div class="stay-confirmed">✅ 已確認預訂 Day 11<br>
+            <span class="hotel-name">🏨 札幌北廣島Classe酒店</span><br>
+            <span class="hotel-en">Sapporo Kitahiroshima Classe Hotel｜距Outlet 5分鐘・距機場20分鐘</span>
+            <div class="booking-pills">
+              <span class="pill pill-price">💴 ¥70,898</span>
+              <span class="pill pill-bkf-y">🍳 早餐 ✓</span>
+              <span class="pill pill-din-n">🍽 晚餐 ✗</span>
+              <span class="pill pill-park">🅿️ 停車 ✓</span>
+              <span class="pill pill-agoda">💳 Agoda</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -703,7 +833,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-attractions">
   <div class="container">
     <p class="section-title">🏛 精選景點 <span>｜道東 & 道北 & 購物</span></p>
-    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v4.4修訂版）</p>
+    <p class="section-subtitle">根據YouTube旅遊影片深度分析，精選20個最值得前往的景點（v4.5修訂版）</p>
     <div class="cards-grid">
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -743,7 +873,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
         <div class="stars">★★★★☆</div><div class="card-tip">💡 傳統舞蹈每晚演出，可預購座位</div>
         <span class="card-tag tag-east">道東</span><span class="card-tag tag-nature">文化</span>
         <button class="toggle-btn" onclick="toggleDetail(this)">▼ 展開詳情</button>
-        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。v4.4安排日間一日遊，看完舞蹈後返回弟子屈住宿。</p></div>
+        <div class="detail-content"><p>日本最大愛努族聚落，約30間手工藝品店和傳統食品店，傳統舞蹈劇場「イコロ」每晚演出（¥1,080）。v4.5安排日間一日遊，看完舞蹈後返回弟子屈住宿。</p></div>
       </div></div>
 
       <div class="attraction-card"><div class="card-top blue"></div><div class="card-body">
@@ -881,10 +1011,10 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 <div class="tab-content" id="tab-info">
   <div class="container">
     <p class="section-title">🚗 交通 &amp; 實用資訊</p>
-    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v4.4 修訂版）</p>
+    <p class="section-subtitle">12天11夜自駕遊完整準備指南（v4.5 修訂版）</p>
 
     <div class="route-visual">
-      <h3>🗺 行程路線總覽（v4.4 最終版）</h3>
+      <h3>🗺 行程路線總覽（v4.5 最終版）</h3>
       <div class="route-flow">
         <div class="route-stop">✈ 新千歲</div><div class="route-arrow">→</div>
         <div class="route-stop">🍖 帶廣</div><div class="route-arrow">→</div>
@@ -905,7 +1035,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
 
     <div class="info-grid">
       <div class="info-card">
-        <h3>🚗 租車資訊（v4.4 更新）</h3>
+        <h3>🚗 租車資訊（v4.5 更新）</h3>
         <ul>
           <li><strong>指定車型：</strong>Toyota Alphard V4（豪華 MPV，6人行舒適首選）</li>
           <li><strong>租車公司：</strong><a href="https://carrental.jpn.com/cn/qa/" target="_blank" style="color:var(--sky-blue);font-weight:700;">carrental.jpn.com</a>（已聯絡確認）</li>
@@ -916,18 +1046,21 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--warm-white);color:va
           <li><strong>高速費：</strong>道東・道北總計約¥18,000-28,000</li>
         </ul>
       </div>
-      <div class="info-card">
-        <h3>🏨 住宿（11晚）</h3>
-        <ul>
-          <li><strong>帶廣（1晚）：</strong>¥15,000-25,000 | Rimse</li>
-          <li><strong>屈斜路王子大飯店（2晚）：</strong>¥25,000-45,000 | 湖畔溫泉</li>
-          <li><strong>知床宇登呂（2晚）：</strong>¥30,000-50,000 | 北こぶし</li>
-          <li><strong>網走（1晚）：</strong>¥12,000-20,000 | Route Inn</li>
-          <li><strong>層雲峡（1晚）：</strong>¥25,000-40,000 | 温泉旅館</li>
-          <li><strong>旭川（1晚）：</strong>¥20,000-30,000 | JR Inn</li>
-          <li><strong>富良野（2晚）：</strong>¥25,000-40,000 | Prince Hotel ★v4新增1晚</li>
-          <li><strong>新千歲近郊（1晚）：</strong>¥18,000-28,000 | ANA千歲</li>
-        </ul>
+      <div class="info-card" style="grid-column:1/-1;">
+        <h3>🏨 住宿一覽（11晚）✅ 全部已確認預訂</h3>
+        <table class="hotel-summary-table">
+          <tr><th>Day</th><th>日期</th><th>地點</th><th>酒店（中文）</th><th>房價</th><th>早餐</th><th>晚餐</th><th>停車</th><th>付款</th></tr>
+          <tr><td><strong>1</strong></td><td>7/20 Mon</td><td>帶廣</td><td>北海道森林溫泉度假酒店</td><td class="htag-price">¥104,586</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr><td><strong>2–3</strong></td><td>7/21–22</td><td>弟子屈</td><td>屈斜路王子太飯店</td><td class="htag-price">¥230,700</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td><span class="pill pill-hotel" style="font-size:.7rem;">酒店付</span></td></tr>
+          <tr><td><strong>4</strong></td><td>7/23 Thu</td><td>知床</td><td>奇奇知床自然度假村</td><td class="htag-price">¥156,348</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr><td><strong>5</strong></td><td>7/24 Fri</td><td>知床</td><td>奇奇知床自然度假村</td><td class="htag-price">¥128,920</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr><td><strong>6</strong></td><td>7/25 Sat</td><td>網走</td><td>網走湖莊大酒店</td><td class="htag-price">¥105,600</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td class="htag-y">✓</td><td><span class="pill pill-hotel" style="font-size:.7rem;">酒店付</span></td></tr>
+          <tr><td><strong>7</strong></td><td>7/26 Sun</td><td>層雲峡</td><td>朝陽度假酒店</td><td class="htag-price">¥99,336</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr><td><strong>8</strong></td><td>7/27 Mon</td><td>旭川</td><td>普樂美雅飯店</td><td class="htag-price">¥87,480</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td style="color:#f59e0b;font-weight:700;">收費</td><td><span class="pill pill-hotel" style="font-size:.7rem;">酒店付</span></td></tr>
+          <tr><td><strong>9–10</strong></td><td>7/28–29</td><td>富良野</td><td>富良野酒店</td><td class="htag-price">¥214,112</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr><td><strong>11</strong></td><td>7/30 Thu</td><td>北広島</td><td>札幌北廣島Classe酒店</td><td class="htag-price">¥70,898</td><td class="htag-y">✓</td><td class="htag-n">✗</td><td class="htag-y">✓</td><td><span class="pill pill-agoda" style="font-size:.7rem;">Agoda</span></td></tr>
+          <tr class="total-row"><td colspan="4"><strong>🏨 住宿總計（11晚・6人）</strong></td><td class="htag-price" style="color:var(--coral-orange);font-size:.95rem;">¥1,197,980</td><td colspan="4" style="font-size:.78rem;color:#6a7a8e;">早餐全包 ✓ ｜ 晚餐包4晚（弟子屈2晚・知床Day4・層雲峡）</td></tr>
+        </table>
       </div>
       <div class="info-card">
         <h3>💰 預算估算</h3>
